@@ -57,7 +57,7 @@
   <video playsinline autoplay muted loop id="bgVideo"
     style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -3;">
     
-    <source src="../../Static Assets/videos/backgroundVideo1.mp4">
+    <source src="../assets/videos/backgroundVideo1.mp4">
     Your browser does not support the video tag.
   </video>
   <div class="content">

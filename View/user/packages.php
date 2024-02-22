@@ -50,7 +50,7 @@
 
 <body>
     <video playsinline autoplay muted loop id="bgVideo" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -3;">
-        <source src="../../Static Assets/videos/backgroundVideo 2.mp4" type="video/mp4">
+        <source src="../assets/videos/backgroundVideo 2.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="content container-fluid">
@@ -74,22 +74,22 @@
                                 <div class="row">
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
                                         <?php
-                                        require "card.php";
+                                        require "cardPackage.php";
                                         ?>
                                     </div>
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
                                         <?php
-                                        require "card.php";
+                                        require "cardPackage.php";
                                         ?>
                                     </div>
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
                                         <?php
-                                        require "card.php";
+                                        require "cardPackage.php";
                                         ?>
                                     </div>
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
                                         <?php
-                                        require "card.php";
+                                        require "cardPackage.php";
                                         ?>
                                     </div>
                                 </div>
