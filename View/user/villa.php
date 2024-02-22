@@ -58,7 +58,7 @@
             <div class="col-12">
                 <div class="row">
                     <?php
-                    include "nav.php";
+                    include "./common/nav.php";
                     ?>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             <div class="col-12 mt-2">
                 <div class="row">
                     <?php
-                    include "footer.php";
+                    include "./common/footer.php";
                     ?>
                 </div>
             </div>
