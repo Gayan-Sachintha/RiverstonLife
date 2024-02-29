@@ -1,3 +1,17 @@
+  <head>
+    <style>    
+    .nav-style {
+      color: white;
+      transition: color 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .nav-style:hover,
+    .nav-style.active {
+      color: #F3C13E;
+    }</style>
+  </head>
+  
   <nav>
     <div class="col-12">
       <div class="row" style="background-color: #222823;">

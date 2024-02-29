@@ -43,7 +43,7 @@
             background-color: #222823;
             color: white;
             padding: 20px;
-            /* border-radius: 50px; Match the card's border radius */
+            border-radius: 50px; 
         }
 
         .card:hover .card-img-overlay {
@@ -56,7 +56,7 @@
 
     <div class="card" style="width: 18rem;height: 100%;border-radius: 50px;background-color: #222823;border: none;">
 
-        <img src="../assets/images/villa/villa1.jpg" alt="">
+        <img src="../assets/images/villa/villa1.jpg" alt="" style="border-radius: 50px;">
         <div class="card-img-overlay">
             <h4 class="card-title text-center">Nature Kabana</h4> <hr>
             <p class="card-text text-center">Immerse yourself in luxury amidst nature at Nature Life Eco Resort. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.</p>

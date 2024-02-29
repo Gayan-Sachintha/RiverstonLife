@@ -37,16 +37,7 @@
       background: rgba(30, 40, 31, 0.75);
     }
 
-    .nav-style {
-      color: white;
-      transition: color 0.5s ease-in-out;
-      cursor: pointer;
-    }
 
-    .nav-style:hover,
-    .nav-style.active {
-      color: #F3C13E;
-    }
 
     .landhomepagesec1 {
       /* background-image: url('../assets/images/homebg.jpg'); */
