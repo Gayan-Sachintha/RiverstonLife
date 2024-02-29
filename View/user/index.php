@@ -25,7 +25,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url('../assets/images/homebg.jpg');
+      /* background-image: url('../assets/images/homebg.jpg'); */
       background-size: cover;
       background-position: center;
       z-index: -2;
@@ -47,6 +47,19 @@
     .nav-style.active {
       color: #F3C13E;
     }
+
+    .landhomepagesec1 {
+      /* background-image: url('../assets/images/homebg.jpg'); */
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
   </style>
   <title>RIVERSTON LIFE</title>
 </head>
@@ -64,13 +77,216 @@
         include "./common/nav.php";
         ?>
       </div>
-      <div class="col-12">
-      <div class="card" style="width: 18rem;border-radius: 50px;background-color: #222823;border: none;">
 
-        <img class="card-img-top mx-3" src="../assets/images/card1.jpg" alt="Card image cap" style="width: 90%;border-radius: 10%;">
-    </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12 bg-danger p-5">
+            <div class="row">
+              <div class="col-12 text-center mt-4" style="z-index: -1;">
+                <h2 class="text-white">EXPLORE RIVERSTON</h2>
+              </div>
+              <div class="col-12 text-center mt-5">
+                <div class="row">
+                  <div class="col-2"></div>
+                  <div class="col-8 bg-white rounded">
+                    <div class="row">
+                      <div class="col-2">Villa Name</div>
+                      <div class="col-2">Check In</div>
+                      <div class="col-2">Check Out</div>
+                      <div class="col-2">Adult</div>
+                      <div class="col-1">Children</div>
+                      <div class="col-1">Room</div>
+                      <div class="col-2 btn btn-success "><a>Check Now</a></div>
+                    </div>
+                  </div>
+                  <div class="col-2"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-3">
+            <div class="row">
+              <!-- carusal -->
+              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
+              </div>
+              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
+              </div>
+              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-5 text-white mt-4">
+            <div class="row">
+              <div class="col-12 col-md-5">
+                <div class="row">
+                  <div class="col-7 mx-3">
+                    <div class="row">
+                      <div class="col-12">
+                        <span>THE CAPPA LUXURY HOTEL</span>
+                        <H3>Enjoy a Luxury Experience</H3>
+                      </div>
+                      <div class="col-12 text-center">
+                        <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the
+                          aucan vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the
+                          pellentesque velit. Donec id velit ac arcu posuere blane.</p>
+                        <p>Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula.
+                          Orci varius natoque penatibus et magnis dis parturient monte nascete ridiculus mus
+                          nellentesque habitant morbine.</p>
+                      </div>
+                      <div class="col-12">
+                        <p>Reservation</p>
+                        <p>778125454</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="row">
+                  <div class="col-6 " style="margin-top: 10%;height: 300px;">
+                    <img src="../assets/images/indeximg/indeximg (4).jpg" alt="" style="width: 100%;height: 100%;">
+                  </div>
+                  <div class="col-6" style="height: 400px;">
+                    <img src="../assets/images/indeximg/indeximg (1).jpg" alt="" style="width: 100%;height: 100%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-4">
+            <div class="row">
+              <div class="col-12 col-md-5 mx-3">
+                <img src="../assets/images/indeximg/indeximg (2).jpg" alt="" style="width: 100%;height: 100%;">
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="row">
+                  <div class="col-8">
+                    <div class="row text-white">
+                      <div class="col-12">
+                        <h3>NATURE LIFE ECO RESORT</h3>
+                      </div>
+                      <div class="col-12 mt-2">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
+                        nesudea
+                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
+                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-4">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
+                        nesudea
+                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
+                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-4">
+                        <button class="btn btn-danger">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-4">
+            <div class="row">
+              <div class="col-12 col-md-5 ">
+                <div class="row">
+                  <div class="col-8 mx-4">
+                    <div class="row text-white">
+                      <div class="col-12">
+                        <h3>Quad Bike Ride</h3>
+                      </div>
+                      <div class="col-12 mt-2">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
+                        nesudea
+                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
+                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-4">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
+                        nesudea
+                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
+                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-4">
+                        <button class="btn btn-danger">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="row">
+                  <img src="../assets/images/indeximg/indeximg (5).jpg" alt="" style="width: 100%;height: 100%;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-4">
+            <div class="row">
+              <div class="col-12 col-md-5 mx-3">
+
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-4">
+            <div class="row">
+              <div class="col-12 col-md-5 mx-3">
+                <img src="../assets/images/indeximg/indeximg (3).jpg" alt="" style="width: 100%;height: 100%;">
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="row">
+                  <div class="col-8">
+                    <div class="row text-white">
+                      <div class="col-12">
+                        <h3>Quad Bike Ride</h3>
+                      </div>
+                      <div class="col-12 mt-2">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
+                        nesudea
+                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
+                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-4">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
+                        nesudea
+                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
+                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-4">
+                        <button class="btn btn-danger">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-3 bg-success">
+            <div class="row">
+              <div class="col-4">
+
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="../assets/images/footer/footer1.jpg" alt=""
+                      style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
+                  </div>
+                  <div class="col-4">
+                    <img src="../assets/images/footer/footer2.jpg" alt=""
+                      style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
+                  </div>
+                  <div class="col-4">
+                    <img src="../assets/images/footer/footer3.jpg" alt=""
+                      style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-12 mt-3">
+
+
+      <div class="col-12 mt-3 bg-success">
         <?php
         include "./common/footer.php";
         ?>
