@@ -44,6 +44,40 @@
         .nav-style.active {
             color: #F3C13E;
         }
+
+        .btnreserve {
+            color: #222823;
+            background-color: #F3C13E;
+            border-radius: 50px;
+            border: none
+        }
+
+        .btnreserve:hover {
+            color: #F3C13E;
+            background-color: #304F34;
+            border-radius: 50px;
+            border: none
+        }
+
+        .card-img-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #222823;
+            color: white;
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        .card:hover .card-img-overlay {
+            opacity: 1;
+        }
     </style>
     <title>RIVERSTON LIFE</title>
 </head>
@@ -73,38 +107,73 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
-                                        <?php
-                                        require "cardVilla.php";
-                                        ?>
+                                        <div class="card" style="width: 18rem;height: 100%;border-radius: 50px;background-color: #222823;border: none;">
+
+                                            <img src="../assets/images/villa/villa1.jpg" alt="" style="border-radius: 50px;">
+                                            <div class="card-img-overlay">
+                                                <h4 class="card-title text-center">Nature Life Eco Resort</h4>
+                                                <hr>
+                                                <p class="card-text text-center"><br>Nestled in the serene Riverston area, Nature Life Eco Resort is a tranquil escape offering cozy cabanas and exhilarating ATV rides amidst lush, natural beauty for the perfect blend of relaxation and adventure.
+
+                                                </p>
+                                                <div class="p-2 text-center">
+                                                    <hr>
+                                                    <button class="btn mb-3 mt-2 btnreserve"><b>View More
+                                                            </b></button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
-                                        <?php
-                                        require "cardVilla.php";
-                                        ?>
+                                        <div class="card" style="width: 18rem;height: 100%;border-radius: 50px;background-color: #222823;border: none;">
+
+                                            <img src="../assets/images/villa/villa3.jpg" alt="" style="border-radius: 50px;">
+                                            <div class="card-img-overlay">
+                                                <h4 class="card-title text-center">Nature Kabana</h4>
+                                                <hr>
+                                                <p class="card-text text-center">Immerse yourself in luxury amidst nature at Nature Life Eco Resort. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.</p>
+                                                <div class="p-2 text-center">
+                                                    <hr>
+                                                    <button class="btn mb-3 mt-2 btnreserve"><b>View More
+                                                            </b></button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
-                                        <?php
-                                        require "cardVilla.php";
-                                        ?>
-                                    </div>
+                                        <div class="card" style="width: 18rem;height: 100%;border-radius: 50px;background-color: #222823;border: none;">
+
+                                            <img src="../assets/images/villa/villa4.jpg" alt="" style="border-radius: 50px;">
+                                            <div class="card-img-overlay">
+                                                <h4 class="card-title text-center">Comming Soon !</h4>
+                                                <hr>
+                                                <p class="card-text text-center">Comming Soon !</p>
+                                                <div class="p-2 text-center">
+                                                    <hr>
+                                                    <button class="btn mb-3 mt-2 btnreserve"><b>Comming Soon!
+                                                            </b></button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-2"></div>
+                </div>
+                <div class="col-12 col-md-2"></div>
 
 
-                </div>
-            </div>
-            <div class="col-12 mt-2">
-                <div class="row">
-                    <?php
-                    include "./common/footer.php";
-                    ?>
-                </div>
             </div>
         </div>
+        <div class="col-12 mt-2">
+            <div class="row">
+                <?php
+                include "./common/footer.php";
+                ?>
+            </div>
+        </div>
+    </div>
     </div>
 
 </body>

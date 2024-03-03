@@ -46,31 +46,31 @@
             color: #F3C13E;
         }
 
-        .fc { /* Targeting the main calendar container */
+        .fc { 
     background-color: rgba(30, 40, 31);
-    color: white; /* This will change the font color */
+    color: white; 
   }
 
-  .fc .fc-daygrid-day { /* Targeting individual day cells */
-    border-color: #202020; /* Setting border color to a darker shade for contrast */
+  .fc .fc-daygrid-day { 
+    border-color: #202020; 
   }
 
-  .fc .fc-daygrid-day-number { /* Targeting the day numbers specifically */
+  .fc .fc-daygrid-day-number { 
     color: white;
   }
 
-  .fc .fc-col-header-cell { /* Targeting column headers */
+  .fc .fc-col-header-cell { 
     background-color: #1e2820;
     color: white;
   }
 
-  .fc .fc-button-primary { /* Customizing calendar buttons */
+  .fc .fc-button-primary {  
     background-color: #F3C13E;
     border-color: #F3C13E;
-    color: #1e2820; /* Text color for buttons */
+    color: #1e2820; 
   }
 
-  .fc .fc-button-primary:hover { /* Button hover state */
+  .fc .fc-button-primary:hover { 
     background-color: #e2b837;
     border-color: #e2b837;
   }

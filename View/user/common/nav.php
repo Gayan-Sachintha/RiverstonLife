@@ -22,11 +22,11 @@
         <div class="col-3"></div>
         <div class="col-5 mt-4" style="color: white;">
           <div class="row nav-layout">
-            <div class="col-12 col-md-2 nav-style">HOME</div> 
-            <div class="col-12 col-md-2 nav-style">VILLAS</div>          
-            <div class="col-12 col-md-2 nav-style">PACKAGES</div>          
-            <div class="col-12 col-md-2 nav-style">ABOUT US</div>          
-            <div class="col-12 col-md-2 nav-style">CONTACT</div>          
+            <div class="col-12 col-md-2 nav-style "><a href="../user/index.php" style="color: inherit; text-decoration: none;">HOME</a></div> 
+            <div class="col-12 col-md-2 nav-style"><a href="../user/villa.php" style="color: inherit; text-decoration: none;">VILLAS</a></div>          
+            <div class="col-12 col-md-2 nav-style"><a href="../user/dustAndDurtpackages.php" style="color: inherit; text-decoration: none;">ATV RIDES</a></div>          
+            <div class="col-12 col-md-2 nav-style"><a href="../user/calender.php" style="color: inherit; text-decoration: none;">ABOUT US</a></div>          
+            <div class="col-12 col-md-2 nav-style"><a href="../user/calender.php" style="color: inherit; text-decoration: none;">CONTACT</a></div>          
           </div>
         </div>
         <div class="col-1"></div>
