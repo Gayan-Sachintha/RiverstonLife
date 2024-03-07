@@ -12,7 +12,7 @@
             <div class="col-12 col-md-2 nav-style">VILLAS</div>          
             <div class="col-12 col-md-2 nav-style">PACKAGES</div>          
             <div class="col-12 col-md-2 nav-style">ABOUT US</div>          
-            <div class="col-12 col-md-2 nav-style">CONTACT</div>          
+            <div class="col-12 col-md-2 nav-style"> CONTACT</div>          
           </div>
         </div>
         <div class="col-1"></div>
