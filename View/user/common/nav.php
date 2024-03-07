@@ -25,7 +25,7 @@
             <div class="col-12 col-md-2 nav-style "><a href="../user/index.php" style="color: inherit; text-decoration: none;">HOME</a></div> 
             <div class="col-12 col-md-2 nav-style"><a href="../user/villa.php" style="color: inherit; text-decoration: none;">VILLAS</a></div>          
             <div class="col-12 col-md-2 nav-style"><a href="../user/dustAndDurtpackages.php" style="color: inherit; text-decoration: none;">ATV RIDES</a></div>          
-            <div class="col-12 col-md-2 nav-style"><a href="../user/calender.php" style="color: inherit; text-decoration: none;">ABOUT US</a></div>          
+            <div class="col-12 col-md-2 nav-style"><a href="../user/aboutUs.php" style="color: inherit; text-decoration: none;">ABOUT US</a></div>          
             <div class="col-12 col-md-2 nav-style"><a href="../user/calender.php" style="color: inherit; text-decoration: none;">CONTACT</a></div>          
           </div>
         </div>
