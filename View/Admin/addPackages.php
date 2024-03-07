@@ -256,137 +256,37 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Add Teacher</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Add Packages</h1>
                     </div>
 
-                    <form action="../handlers/adminAddedInstructors.php" method="post" enctype="multipart/form-data">
+                    <form action="../Controllers/addpackages.php" method="post" enctype="multipart/form-data">
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="inputEmail4">First Name</label>
-                            <input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputPassword4">Last Name</label>
-                            <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                            <label for="inputEmail4">Package Name</label>
+                            <input name="packageName" type="text" class="form-control" id="packageName" placeholder="First Name" required>
                           </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label for="inputEmail4">Address</label>
-                              <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="inputPassword4">Address 2</label>
-                              <input name="address2" type="password" class="form-control" id="address2" placeholder="Password" required>
+                              <label for="inputEmail4">Description</label>
+                              <input type="description" name="address" class="form-control" id="description" placeholder="Address" required>
                             </div>
                           </div>
 
                           <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label for="inputEmail4">Country</label>
-                              <input name="country" type="text" class="form-control" id="country" placeholder="Country" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="inputPassword4">City</label>
-                              <input name="city" type="text" class="form-control" id="city" placeholder="City" required>
-                            </div>
-                          </div>
-
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="inputEmail4">Zip</label>
-                              <input name="zipcode" type="text" class="form-control" id="zipcode" placeholder="Zip Code" required>
-                            </div>
-
-                            <div class="form-group col-md-6">
-                              <label for="inputPassword4">Contact</label>
-                              <input name="phone" id="phone" type="tel" class="form-control" placeholder="Contact No" required>
+                              <label for="inputEmail4">Price</label>
+                              <input name="price" type="text" class="form-control" id="price" placeholder="Country" required>
                             </div>
                           </div>
 
                             <div class="form-group ">
-                                <label for="image">Profile Picture</label><br>
+                                <label for="image">Package Image</label><br>
                                 <input type="file" name="imageFile" id="imageFile" class="form-control-file" required>
                             </div>
 
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="inputEmail4">Email</label>
-                              <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="inputPassword4">Password</label>
-                              <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
-                            </div>
-                          </div>
-
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputState">Highest Education Level</label>
-                                <select name="educationL" class="form-control" required>
-                                    <option value="">--Select Education Level--</option>
-                                    <option value="none">None</option>
-                                    <option value="Diploma">Diploma</option>
-                                    <option value="bachelors">Bachelor's Degree</option>
-                                    <option value="masters">Master's Degree</option>
-                                    <option value="doctorate">Doctorate</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group col-md-6">
-                                <label for="inputState">Experience</label>
-                                <select name="Experience" id="Experience" class="form-control" required>
-                                    <option value="">--Select Experience Level--</option>
-                                    <option value="none">None</option>
-                                    <option value=">1">Less than 5 year</option>
-                                    <option value="5<">Above 5 years</option>
-                                </select>
-                            </div>
-                          </div>
-
-
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputZip">Your Degree Path</label>
-                            <input name="degreeP" type="text" class="form-control" id="degreeP" placeholder="Degree path" required>
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputZip">Your Subject Stream</label>
-                            <input name="streem" type="text" class="form-control" id="inputZip" placeholder="Enter your Subject or Streem" required>
-                          </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputState">Teaching Grades</label>
-                                <select name="ExperienceLevel" class="form-control" required>
-                                    <option value="">--Select Grade--</option>
-                                    <option value="none">None</option>
-                                    <option value="pre">Pre Schools</option>
-                                    <option value="Primary">Primary Schools</option>
-                                    <option value="Ordinary">Ordinary Levels</option>
-                                    <option value="Advanced">Advanced Levels</option>
-                                    <option value="Undergraduates">Undergraduates</option>                                        <option value="Postgraduates">Postgraduates</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-
-                            <div class="mt-3">
-                                <label for="image">Upload Your Resume as PDF</label><br>
-                                <input type="file" name="resumeFile" id="resumeFile" class="form-control-file" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                              Confirm Add the Teacher
-                            </label>
-                          </div>
-                        </div>
-                        <button type="submit" name="regNext" class="btn btn-primary">Add Teacher</button>
+                        <button type="submit" name="regNext" class="btn btn-primary">Add Package</button>
                       </form>
 
             </div>

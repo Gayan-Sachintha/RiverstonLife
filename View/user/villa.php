@@ -118,7 +118,7 @@
                                                 </p>
                                                 <div class="p-2 text-center">
                                                     <hr>
-                                                   <a href="../user/villaView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
+                                                   <a href="./natureLifeVillaView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
                                                 </div>
                                             </div>
                                         </div>
