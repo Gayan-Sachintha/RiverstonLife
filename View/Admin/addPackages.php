@@ -259,25 +259,25 @@
                         <h1 class="h3 mb-0 text-gray-800">Add Packages</h1>
                     </div>
 
-                    <form action="../Controllers/addpackages.php" method="post" enctype="multipart/form-data">
+                    <form action="../../Controllers/submitpackages.php" method="post" enctype="multipart/form-data">
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="inputEmail4">Package Name</label>
-                            <input name="packageName" type="text" class="form-control" id="packageName" placeholder="First Name" required>
+                            <input name="packageName" type="text" class="form-control" id="packageName" placeholder="Enter package name" required>
                           </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                               <label for="inputEmail4">Description</label>
-                              <input type="description" name="address" class="form-control" id="description" placeholder="Address" required>
+                              <input type="description" name="address" class="form-control" id="description" placeholder="Enter description for package" required>
                             </div>
                           </div>
 
                           <div class="form-row">
                             <div class="form-group col-md-6">
                               <label for="inputEmail4">Price</label>
-                              <input name="price" type="text" class="form-control" id="price" placeholder="Country" required>
+                              <input name="price" type="text" class="form-control" id="price" placeholder="Enter package price" required>
                             </div>
                           </div>
 
