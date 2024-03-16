@@ -133,8 +133,7 @@
                                                 <p class="card-text text-center">Immerse yourself in luxury amidst nature at Nature Life Eco Resort. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.</p>
                                                 <div class="p-2 text-center">
                                                     <hr>
-                                                    <button class="btn mb-3 mt-2 btnreserve"><b>View More
-                                                            </b></button>
+                                                   <a href="./natureKabana.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
                                                 </div>
                                             </div>
                                         </div>

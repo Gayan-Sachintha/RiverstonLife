@@ -78,7 +78,8 @@
 
       <div class="col-12">
         <div class="row">
-          <div class="col-12 bg-danger p-5">
+          <div class="col-12 bg-danger p-5 "style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
+            
             <div class="row">
               <div class="col-12 text-center mt-4" style="z-index: -1;">
                 <h2 class="text-white">EXPLORE RIVERSTON</h2>
