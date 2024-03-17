@@ -1,5 +1,5 @@
 <?php 
-    include('../Databsase/connection.php');
+    include("../../Controllers/config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -278,24 +278,20 @@
                     <div class="col-12 ">
                         <div class="card shadow mb-4">
                         <table class="table" style="align-items: center;">
-                                <thead class="bg-gradient-primary">
+                                <thead class="" style="background-color: #565E57;">
                                     <tr style="color: white;">
                                         <th scope="col">Image</th>
+                                        <th scope="col">ID</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Phone Number</th>
-                                        <th scope="col">Address</th>
-                                        <th scope="col">Country</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Education Level</th>
-                                        <th scope="col">CV</th>
-                                        <th scope="col">Status</th>
-
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
 
                                 <?php
-                                    $sql = "SELECT * FROM Instructors WHERE Status = 'Blocked' ORDER BY `id` ASC";
-                                    $result = mysqli_query($connection,$sql);
+                                    $sql = "SELECT * FROM packages";
+                                    $result = mysqli_query($conn,$sql);
 
                                     if(mysqli_num_rows($result) > 0){
                                         while($row = mysqli_fetch_array($result)){  
@@ -303,13 +299,10 @@
                                 <tbody>
                                     <tr>
                                         <th><img src="<?php echo $row["imagePath"]?>" style="width: 50px;height: 50px;"></th>
-                                        <td><?php echo $row["FirstName"] ?></td>
-                                        <td><?php echo $row["Phone"] ?></td>
-                                        <td><?php echo $row["Address"] ?></td>
-                                        <td><?php echo $row["Country"] ?></td>
-                                        <td><?php echo $row["Email"] ?></td>
-                                        <td><?php echo $row["DegreeP"] ?></td>
-                                        <td><a href="<?php echo $row["pdfPath"] ?>"><button type="button" class="btn btn-primary">View CV</button></a></td>
+                                        <td><?php echo $row["id"] ?></td>
+                                        <td><?php echo $row["packageName"] ?></td>
+                                        <td><?php echo $row["description"] ?></td>
+                                        <td><?php echo "Rs ".$row["price"] ?></td>
                                         
                                         <td>
                                             <!-- <div class="dropdown">
@@ -321,7 +314,6 @@
                                             </div> -->
 
                                             <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
-                                                <button type="button" class="btn btn-success" onclick="unblockInstructor(<?php echo $row['id'] ?>)">Unblock</button>
                                                 <button type="button" class="btn btn-danger" onclick="deleteInstructor(<?php echo $row['id'] ?>)">Delete</button>
                                             </div>
                                         </td>
