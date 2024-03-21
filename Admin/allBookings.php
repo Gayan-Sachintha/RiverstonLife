@@ -263,10 +263,7 @@ include('../Controllers/config.php');
                                         </div>
                                     </form>
                                 </div>
-                                
                             </div>
-
-
                         </div>
                     </div>
 
