@@ -1,3 +1,7 @@
+<?php
+    include("../Controllers/config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +13,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Packages</title>
+    <title>All Teachers</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <style>select{
-        border:none;
-        padding: 10px 20px;
-        border-radius:5px;
-        outline: 3px solid #f2f2f2;
-      }
-      
-      select:focus{
-        outline:none;
-      }</style>
+    <script>
+        function blockInstructor(id){
+            window.location.href = '../handlers/block.php?id=' + id;
+        }
+    </script>
+
+    <style>
+        select {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            outline: 3px solid #f2f2f2;
+        }
+
+        select:focus {
+            outline: none;
+        }
+    </style>
 
 </head>
 
@@ -39,7 +49,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-<?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -56,11 +66,9 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -74,18 +82,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -98,15 +102,13 @@
 
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
                                 </h6>
@@ -149,22 +151,19 @@
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
                                 <span class="badge badge-danger badge-counter">7</span>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -175,8 +174,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -187,8 +185,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -199,8 +196,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -217,15 +213,12 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">SmartVaathi</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -256,40 +249,90 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Add Packages</h1>
+                        <h1 class="h3 mb-0 text-gray-800">All Packages</h1>
                     </div>
 
-                    <form action="../../Controllers/submitpackages.php" method="post" enctype="multipart/form-data">
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">Package Name</label>
-                            <input name="packageName" type="text" class="form-control" id="packageName" placeholder="Enter package name" required>
-                          </div>
+                    <div class="row mb-4">
+                        <div class="col-12">
+
+                            <div class="col-3">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <div class="row">
+                                        <div class="col-9"> <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                        </div>
+                                        <div class="col-3"> <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
+                    </div>
+                </div>
 
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="inputEmail4">Description</label>
-                              <input type="description" name="address" class="form-control" id="description" placeholder="Enter description for package" required>
-                            </div>
-                          </div>
+                <form action="">
+                    <div class="col-12 ">
+                        <div class="card shadow mb-4">
+                        <table class="table" style="align-items: center;">
+                                <thead class="" style="background-color: #565E57;">
+                                    <tr style="color: white;">
+                                        <th scope="col">Image</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col"></th>
 
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="inputEmail4">Price</label>
-                              <input name="price" type="text" class="form-control" id="price" placeholder="Enter package price" required>
-                            </div>
-                          </div>
+                                    </tr>
+                                </thead>
 
-                            <div class="form-group ">
-                                <label for="image">Package Image</label><br>
-                                <input type="file" name="imageFile" id="imageFile" class="form-control-file" required>
-                            </div>
+                                <?php
+                                    $sql = "SELECT * FROM packages";
+                                    $result = mysqli_query($conn,$sql);
 
-                        <button type="submit" name="regNext" class="btn btn-primary">Add Package</button>
-                      </form>
+                                    if(mysqli_num_rows($result) > 0){
+                                        while($row = mysqli_fetch_array($result)){  
+                                ?>
+                                <tbody>
+                                    <tr>
+                                        <th><img src="<?php echo $row["imagePath"]?>" style="width: 50px;height: 50px;"></th>
+                                        <td><?php echo $row["id"] ?></td>
+                                        <td><?php echo $row["packageName"] ?></td>
+                                        <td><?php echo $row["description"] ?></td>
+                                        <td><?php echo "Rs ".$row["price"] ?></td>
+                                        
+                                        <td>
+                                            <!-- <div class="dropdown">
+                                                <select name="status" id="status" onChange="updateStatus(this, '')">
+                                                    <option value="Approved" class="text-success" >Approved</option>
+                                                    <option value="Blocked" class="text-danger">Blocked</option>
+                                                    <option value="Pending" class="text-info" selected>Pending</option>
+                                                </select>
+                                            </div> -->
 
+                                            <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
+                                                <button type="button" class="btn btn-success" onclick="blockInstructor(<?php echo $row['id'] ?>)">Update</button>
+                                                <button type="button" class="btn btn-danger" onclick="blockInstructor(<?php echo $row['id'] ?>)">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <?php
+                                        }
+                                    }
+                                ?>
+                            </table>
+                            <tfooter class="mb-4" style="margin-right: 2%;">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary me-md-2 mx-2" type="button"><i class="bi bi-arrow-left-short"></i></button>
+                                    <button class="btn btn-primary" type="button"><i class="bi bi-arrow-right-short"></i></button>
+                                </div>
+                            </tfooter>
+                        </div>
+                    </div>
+                </form>
             </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -313,8 +356,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -341,6 +383,71 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <script>
+        document.getElementById('statusSelect').addEventListener('change', function() {
+            var selectedOption = this.value;
+            if (selectedOption === 'Approved') {
+                Swal.fire({
+                    title: "Are you sure to change status to Approved?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, change it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            "Approved!",
+                            "The status has been changed to Approved.",
+                            "success"
+                        );
+                        // Handle the approval process here
+                    }
+                });
+            } else if (selectedOption === 'Blocked') {
+                Swal.fire({
+                    title: "Are you sure to change status to Blocked?",
+                    text: "This will restrict access!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Yes, block it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            "Blocked!",
+                            "The status has been changed to Blocked.",
+                            "error"
+                        );
+                        // Handle the blocking process here
+                    }
+                });
+            } else if (selectedOption === 'Pending') {
+                Swal.fire({
+                    title: "Change status to Pending?",
+                    text: "You can change this later.",
+                    icon: "info",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, set it to Pending!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            "Pending!",
+                            "The status has been changed to Pending.",
+                            "success"
+                        );
+                        // Handle the pending status setting here
+                    }
+                });
+            }
+        });
+    </script>
+
 
 </body>
 

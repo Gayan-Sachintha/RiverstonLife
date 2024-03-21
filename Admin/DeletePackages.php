@@ -1,7 +1,6 @@
-<?php
-    include("../../Controllers/config.php");
+<?php 
+    include("../Controllers/config.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>All Teachers</title>
+    <title>Blocked Teacher</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,8 +23,12 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        function blockInstructor(id){
-            window.location.href = '../handlers/block.php?id=' + id;
+        function unblockInstructor(id){
+            window.location.href = '../handlers/unblockInstructor.php?id=' + id;
+        }
+
+        function deleteInstructor(id){
+            window.location.href = '../handlers/deleteInstructor.php?id=' + id;
         }
     </script>
 
@@ -249,7 +252,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">All Packages</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Blocked Teacher </h1>
                     </div>
 
                     <div class="row mb-4">
@@ -268,6 +271,7 @@
 
                         </div>
                     </div>
+
                 </div>
 
                 <form action="">
@@ -282,7 +286,6 @@
                                         <th scope="col">Description</th>
                                         <th scope="col">Price</th>
                                         <th scope="col"></th>
-
                                     </tr>
                                 </thead>
 
@@ -311,8 +314,7 @@
                                             </div> -->
 
                                             <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
-                                                <button type="button" class="btn btn-success" onclick="blockInstructor(<?php echo $row['id'] ?>)">Update</button>
-                                                <button type="button" class="btn btn-danger" onclick="blockInstructor(<?php echo $row['id'] ?>)">Delete</button>
+                                                <button type="button" class="btn btn-danger" onclick="deleteInstructor(<?php echo $row['id'] ?>)">Delete</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -385,69 +387,68 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script>
-        document.getElementById('statusSelect').addEventListener('change', function() {
-            var selectedOption = this.value;
-            if (selectedOption === 'Approved') {
-                Swal.fire({
-                    title: "Are you sure to change status to Approved?",
-                    text: "You won't be able to revert this!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
-                    confirmButtonText: "Yes, change it!"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire(
-                            "Approved!",
-                            "The status has been changed to Approved.",
-                            "success"
-                        );
-                        // Handle the approval process here
-                    }
-                });
-            } else if (selectedOption === 'Blocked') {
-                Swal.fire({
-                    title: "Are you sure to change status to Blocked?",
-                    text: "This will restrict access!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#d33",
-                    cancelButtonColor: "#3085d6",
-                    confirmButtonText: "Yes, block it!"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire(
-                            "Blocked!",
-                            "The status has been changed to Blocked.",
-                            "error"
-                        );
-                        // Handle the blocking process here
-                    }
-                });
-            } else if (selectedOption === 'Pending') {
-                Swal.fire({
-                    title: "Change status to Pending?",
-                    text: "You can change this later.",
-                    icon: "info",
-                    showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
-                    confirmButtonText: "Yes, set it to Pending!"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire(
-                            "Pending!",
-                            "The status has been changed to Pending.",
-                            "success"
-                        );
-                        // Handle the pending status setting here
-                    }
-                });
-            }
-        });
-    </script>
-
+    document.getElementById('statusSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        if (selectedOption === 'Approved') {
+            Swal.fire({
+                title: "Are you sure to change status to Approved?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, change it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        "Approved!",
+                        "The status has been changed to Approved.",
+                        "success"
+                    );
+                    // Handle the approval process here
+                }
+            });
+        } else if (selectedOption === 'Blocked') {
+            Swal.fire({
+                title: "Are you sure to change status to Blocked?",
+                text: "This will restrict access!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Yes, block it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        "Blocked!",
+                        "The status has been changed to Blocked.",
+                        "error"
+                    );
+                    // Handle the blocking process here
+                }
+            });
+        } else if (selectedOption === 'Pending') {
+            Swal.fire({
+                title: "Change status to Pending?",
+                text: "You can change this later.",
+                icon: "info",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, set it to Pending!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        "Pending!",
+                        "The status has been changed to Pending.",
+                        "success"
+                    );
+                    
+                }
+            });
+        }
+    });
+</script>
 
 </body>
 
