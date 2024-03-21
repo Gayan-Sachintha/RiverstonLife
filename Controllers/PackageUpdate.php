@@ -18,14 +18,14 @@ if (isset($_POST["regNext"])) {
     //     die("Sorry, there was an error uploading your file.");
     // }
 
-    $sql = "UPDATE `packages` SET `packageName`= ? ,`description`= ? ,`price`= ?  WHERE id = ".$id."";
+    $sql = "UPDATE `packages` SET `packageName`= ? ,`description`= ? ,`price`= ?  WHERE `id` = ?";
     
     if ($stmt = mysqli_prepare($conn, $sql)) {
-        mysqli_stmt_bind_param($stmt, "sss" ,  $packageName, $description, $price);
+        mysqli_stmt_bind_param($stmt, "sssi" ,  $packageName, $description, $price, $id);
 
         if (mysqli_stmt_execute($stmt)) {
             echo "Package Updated Successfully";
-            header("Location: ../Admin/UpdatePackages.php"); 
+            header("Location: ../Admin/allPackages.php"); 
         } else {
             echo "Error: " . mysqli_error($conn);
         }

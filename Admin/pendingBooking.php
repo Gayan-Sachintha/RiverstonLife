@@ -1,3 +1,7 @@
+<?php
+include('../Controllers/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,6 +40,12 @@
             /* Scale down to 80% of the original size */
         }
     </style>
+
+    <script>
+        function ApproveBooking(id){
+            window.location.href = '../Controllers/approveBooking.php?id=' + id;
+        }
+    </script>
 
 </head>
 
@@ -208,7 +218,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin Kasun</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -243,7 +253,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">All Users</h1>
+                        <h1 class="h3 mb-0 text-gray-800">All Booking Details</h1>
                     </div>
 
                     <div class="row mb-4">
@@ -259,12 +269,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-2">
-                                    <a href="addAdmin.php"><button class="btn bg-gradient-primary text-light font-weight-bold">+ Add User</button></a>
-                                </div>
                             </div>
-
-
                         </div>
                     </div>
 
@@ -278,33 +283,45 @@
                                     <tr style="color: white;">
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Address</th>
+                                        <th scope="col">NIC</th>
                                         <th scope="col">Phone Number</th>
-                                        <th scope="col">Role</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Adults</th>
+                                        <th scope="col">Kids</th>
+                                        <th scope="col">Check In</th>
+                                        <th scope="col">Check Out</th>
                                         <th scope="col">Action</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Thushani Perera</td>
-                                        <td>thushani@gmail.com</td>
-                                        <td>Alamo, California</td>
-                                        <td>2</td>
-                                        <td>Admin</td>
-                                        <td>
-                                            <div class="row">
-                                                <span class="text-dark bg-success p-2 rounded">Active</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-3"><i class="bi bi-pencil-square"></i></div>
-                                                <div class="col-3"> <i class="bi bi-trash-fill"></i></div>
-                                            </div>
-                                        </td>
-                                    </tr>
+
+                                    <?php
+                                    $sql = "SELECT * FROM villareservations WHERE status = 'Pending'";
+
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if (mysqli_num_rows($result)) {
+                                        while($row = mysqli_fetch_assoc($result)){
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $row['first_name'] ?></td>
+                                            <td><?php echo $row['email'] ?></td>
+                                            <td><?php echo $row['nic'] ?></td>
+                                            <td><?php echo $row['contact_no'] ?></td>
+                                            <td><?php echo $row['adults'] ?></td>
+                                            <td><?php echo $row['kids'] ?></td>
+                                            <td><?php echo $row['check_in_date'] ?></td>
+                                            <td><?php echo $row['check_out_date'] ?></td>
+                                            <td>
+                                                <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
+                                                    <button type="button" class="btn btn-success" onclick="ApproveBooking(<?php echo $row['id'] ?>)">Approve</button>
+                                                    <button type="button" class="btn btn-danger" onclick="DeleteBooking(<?php echo $row['id'] ?>)">Cancel</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                             <tfooter class="mb-4" style="margin-right: 2%;">
@@ -323,7 +340,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; E-Support 2024</span>
+                        <span>Copyright &copy; Unlimited Five 2024</span>
                     </div>
                 </div>
             </footer>

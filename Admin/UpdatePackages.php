@@ -251,7 +251,8 @@ include("../Controllers/config.php");
 
                     <form action="../Controllers/PackageUpdate.php" method="post" enctype="multipart/form-data">
                         <?php
-                        $sql = "SELECT * FROM packages WHERE id = ". $_GET['id']."";
+                        $id = $_GET['id'];
+                        $sql = "SELECT * FROM packages WHERE `id` = $id";
 
                         $result = mysqli_query($conn, $sql);
 
@@ -291,7 +292,7 @@ include("../Controllers/config.php");
                                 <input type="file" name="imageFile" id="imageFile" class="form-control-file">
                             </div>
 
-                            <button type="submit" name="regNext" class="btn btn-primary">Add Package</button>
+                            <button type="submit" name="regNext" class="btn btn-primary">Update Package</button>
                         <?php
                         }
                         ?>

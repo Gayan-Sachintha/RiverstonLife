@@ -1,3 +1,7 @@
+<?php
+include('../Controllers/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Add Admin</title>
+    <title>Admins</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,6 +33,11 @@
 
         select:focus {
             outline: none;
+        }
+
+        .btn-scaled {
+            transform: scale(0.8);
+            /* Scale down to 80% of the original size */
         }
     </style>
 
@@ -200,7 +209,6 @@
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
-
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -239,125 +247,177 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Add Booking</h1>
+                        <h1 class="h3 mb-0 text-gray-800">All Booking Details</h1>
                     </div>
 
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12">
-                                <form class="align-middle">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputName">Name</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputEmail">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="city">City</label>
-                                            <input type="text" class="form-control" id="city" placeholder="Enter City" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="pNo">Phone Number</label>
-                                            <input type="text" class="form-control" id="pNo" placeholder="Enter Contact Number" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="address">Address</label>
-                                            <input type="text" class="form-control" id="address" placeholder="Enter Address" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <div class="form-check" required>
-                                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                <label class="form-check-label" for="gridCheck">
-                                                    Confirm Add the admin
-                                                </label>
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-10">
+                                    <form class="form-inline my-2 my-lg-0">
+                                        <div class="row">
+                                            <div class="col-9"> <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                            </div>
+                                            <div class="col-3"> <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary">Add Admin</button>
-                                    <a href="admins.php"><button type="button" class="btn btn-danger">Cancel</button></a>
-
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Unlimited Five 2024</span>
+                <form action="">
+                    <div class="col-12 ">
+                        <div class="card shadow mb-4">
+                            <table class="table" style="align-items: center;">
+                                <thead class="" style="background-color: #565E57;">
+                                    <tr style="color: white;">
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">NIC</th>
+                                        <th scope="col">Phone Number</th>
+                                        <th scope="col">Adults</th>
+                                        <th scope="col">Kids</th>
+                                        <th scope="col">Check In</th>
+                                        <th scope="col">Check Out</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <?php
+                                    $sql = "SELECT * FROM villareservations WHERE status = 'Approved'";
+
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if (mysqli_num_rows($result)) {
+                                        while($row = mysqli_fetch_assoc($result)){
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $row['first_name'] ?></td>
+                                            <td><?php echo $row['email'] ?></td>
+                                            <td><?php echo $row['nic'] ?></td>
+                                            <td><?php echo $row['contact_no'] ?></td>
+                                            <td><?php echo $row['adults'] ?></td>
+                                            <td><?php echo $row['kids'] ?></td>
+                                            <td><?php echo $row['check_in_date'] ?></td>
+                                            <td><?php echo $row['check_out_date'] ?></td>            
+                                        </tr>
+
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <tfooter class="mb-4" style="margin-right: 2%;">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary me-md-2 mx-2" type="button"><i class="bi bi-arrow-left-short"></i></button>
+                                    <button class="btn btn-primary" type="button"><i class="bi bi-arrow-right-short"></i></button>
+                                </div>
+                            </tfooter>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
-
+                </form>
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Unlimited Five 2024</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.php">Logout</a>
-                    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.php">Logout</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="assets/jquery/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script>
+        document.getElementById('statusSelect').addEventListener('change', function() {
+            var selectedOption = this.value; // Simplified access to the selected option value
+            if (selectedOption === 'Approved') {
+                Swal.fire({
+                    title: "Are you sure to change status?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, change it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Approved!",
+                            text: "The status has been changed to Approved.",
+                            icon: "success"
+                        });
+                    }
+                });
+            } else if (selectedOption === 'Blocked') {
+                Swal.fire({
+                    title: "Are you sure to change status?",
+                    text: "This will restrict access!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Yes, block it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Blocked!",
+                            text: "The status has been changed to Blocked.",
+                            icon: "error"
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+
 
 </body>
 
