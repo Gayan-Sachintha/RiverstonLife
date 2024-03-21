@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../images/jungle.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.topic{
+    margin-bottom: 70px;
+    animation: backwards;
+    transform: scale(1.5);
+    animation: transitionIN 1s;
+}
+
+.topic h1{
+    color: white;
+    font-size: 68px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login_container{
+    border: 2px solid rgb(255, 0, 0);
+    padding: 25px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    animation: moveSide 1s;
+}
+
+@keyframes transitionIN{
+    from{
+        opacity: 0;
+        scale: 0.1;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes moveSide{
+    from{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
