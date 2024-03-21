@@ -37,7 +37,6 @@
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="allPackages.php">All Packages</a>
                         <a class="collapse-item" href="addPackages.php">Add Package</a>
-                        <a class="collapse-item" href="DeletePackages.php">Deleted Packages</a>
                     </div>
                 </div>
             </li>

@@ -1,5 +1,5 @@
-<?php 
-    include("../Controllers/config.php");
+<?php
+include("../Controllers/config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blocked Teacher</title>
+    <title>Delete Packages</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,12 +23,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        function unblockInstructor(id){
+        function unblockInstructor(id) {
             window.location.href = '../handlers/unblockInstructor.php?id=' + id;
-        }
-
-        function deleteInstructor(id){
-            window.location.href = '../handlers/deleteInstructor.php?id=' + id;
         }
     </script>
 
@@ -249,90 +245,59 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Blocked Teacher </h1>
+                        <h1 class="h3 mb-0 text-gray-800">Update Packages</h1>
                     </div>
 
-                    <div class="row mb-4">
-                        <div class="col-12">
+                    <form action="../Controllers/PackageUpdate.php" method="post" enctype="multipart/form-data">
+                        <?php
+                        $sql = "SELECT * FROM packages WHERE id = ". $_GET['id']."";
 
-                            <div class="col-3">
-                                <form class="form-inline my-2 my-lg-0">
-                                    <div class="row">
-                                        <div class="col-9"> <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                        </div>
-                                        <div class="col-3"> <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                                        </div>
-                                    </div>
-                                </form>
+                        $result = mysqli_query($conn, $sql);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            $row = mysqli_fetch_assoc($result);
+                        ?>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Package ID</label>
+                                    <input value="<?php echo $row['id'] ?>" name="id" type="text" class="form-control" id="id" readonly>
+                                </div>
                             </div>
 
-                        </div>
-                    </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Package Name</label>
+                                    <input value="<?php echo $row['packageName'] ?>" name="packageName" type="text" class="form-control" id="packageName" placeholder="Enter package name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Description</label>
+                                    <input type="text" value="<?php echo $row['description'] ?>" name="description" class="form-control" id="description" placeholder="Enter description for package" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Price</label>
+                                    <input name="price" value="<?php echo $row['price'] ?>" type="text" class="form-control" id="price" placeholder="Enter package price" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="image">Package Image</label><br>
+                                <input type="file" name="imageFile" id="imageFile" class="form-control-file">
+                            </div>
+
+                            <button type="submit" name="regNext" class="btn btn-primary">Add Package</button>
+                        <?php
+                        }
+                        ?>
+                    </form>
 
                 </div>
-
-                <form action="">
-                    <div class="col-12 ">
-                        <div class="card shadow mb-4">
-                        <table class="table" style="align-items: center;">
-                                <thead class="" style="background-color: #565E57;">
-                                    <tr style="color: white;">
-                                        <th scope="col">Image</th>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-
-                                <?php
-                                    $sql = "SELECT * FROM packages";
-                                    $result = mysqli_query($conn,$sql);
-
-                                    if(mysqli_num_rows($result) > 0){
-                                        while($row = mysqli_fetch_array($result)){  
-                                ?>
-                                <tbody>
-                                    <tr>
-                                        <th><img src="<?php echo $row["imagePath"]?>" style="width: 50px;height: 50px;"></th>
-                                        <td><?php echo $row["id"] ?></td>
-                                        <td><?php echo $row["packageName"] ?></td>
-                                        <td><?php echo $row["description"] ?></td>
-                                        <td><?php echo "Rs ".$row["price"] ?></td>
-                                        
-                                        <td>
-                                            <!-- <div class="dropdown">
-                                                <select name="status" id="status" onChange="updateStatus(this, '')">
-                                                    <option value="Approved" class="text-success" >Approved</option>
-                                                    <option value="Blocked" class="text-danger">Blocked</option>
-                                                    <option value="Pending" class="text-info" selected>Pending</option>
-                                                </select>
-                                            </div> -->
-
-                                            <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
-                                                <button type="button" class="btn btn-danger" onclick="deleteInstructor(<?php echo $row['id'] ?>)">Delete</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <?php
-                                        }
-                                    }
-                                ?>
-                            </table>
-                            <tfooter class="mb-4" style="margin-right: 2%;">
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button class="btn btn-primary me-md-2 mx-2" type="button"><i class="bi bi-arrow-left-short"></i></button>
-                                    <button class="btn btn-primary" type="button"><i class="bi bi-arrow-right-short"></i></button>
-                                </div>
-                            </tfooter>
-                        </div>
-                    </div>
-                </form>
             </div>
             <!-- End of Main Content -->
 
@@ -387,68 +352,68 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script>
-    document.getElementById('statusSelect').addEventListener('change', function() {
-        var selectedOption = this.value;
-        if (selectedOption === 'Approved') {
-            Swal.fire({
-                title: "Are you sure to change status to Approved?",
-                text: "You won't be able to revert this!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, change it!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        "Approved!",
-                        "The status has been changed to Approved.",
-                        "success"
-                    );
-                    // Handle the approval process here
-                }
-            });
-        } else if (selectedOption === 'Blocked') {
-            Swal.fire({
-                title: "Are you sure to change status to Blocked?",
-                text: "This will restrict access!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#d33",
-                cancelButtonColor: "#3085d6",
-                confirmButtonText: "Yes, block it!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        "Blocked!",
-                        "The status has been changed to Blocked.",
-                        "error"
-                    );
-                    // Handle the blocking process here
-                }
-            });
-        } else if (selectedOption === 'Pending') {
-            Swal.fire({
-                title: "Change status to Pending?",
-                text: "You can change this later.",
-                icon: "info",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, set it to Pending!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        "Pending!",
-                        "The status has been changed to Pending.",
-                        "success"
-                    );
-                    
-                }
-            });
-        }
-    });
-</script>
+        document.getElementById('statusSelect').addEventListener('change', function() {
+            var selectedOption = this.value;
+            if (selectedOption === 'Approved') {
+                Swal.fire({
+                    title: "Are you sure to change status to Approved?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, change it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            "Approved!",
+                            "The status has been changed to Approved.",
+                            "success"
+                        );
+                        // Handle the approval process here
+                    }
+                });
+            } else if (selectedOption === 'Blocked') {
+                Swal.fire({
+                    title: "Are you sure to change status to Blocked?",
+                    text: "This will restrict access!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Yes, block it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            "Blocked!",
+                            "The status has been changed to Blocked.",
+                            "error"
+                        );
+                        // Handle the blocking process here
+                    }
+                });
+            } else if (selectedOption === 'Pending') {
+                Swal.fire({
+                    title: "Change status to Pending?",
+                    text: "You can change this later.",
+                    icon: "info",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, set it to Pending!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            "Pending!",
+                            "The status has been changed to Pending.",
+                            "success"
+                        );
+
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 

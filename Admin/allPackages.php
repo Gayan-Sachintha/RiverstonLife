@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>All Teachers</title>
+    <title>All Packages</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,8 +24,12 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        function blockInstructor(id){
-            window.location.href = '../handlers/block.php?id=' + id;
+        function DeletePackages(id){
+            window.location.href = '../Controllers/deletePackages.php?id=' + id;
+        }
+
+        function UpdatePackages(id){
+            window.location.href = 'UpdatePackages.php?id=' + id;
         }
     </script>
 
@@ -311,8 +315,8 @@
                                             </div> -->
 
                                             <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
-                                                <button type="button" class="btn btn-success" onclick="blockInstructor(<?php echo $row['id'] ?>)">Update</button>
-                                                <button type="button" class="btn btn-danger" onclick="blockInstructor(<?php echo $row['id'] ?>)">Delete</button>
+                                                <button type="button" class="btn btn-success" onclick="UpdatePackages(<?php echo $row['id'] ?>)">Update</button>
+                                                <button type="button" class="btn btn-danger" onclick="DeletePackages(<?php echo $row['id'] ?>)">Delete</button>
                                             </div>
                                         </td>
                                     </tr>
