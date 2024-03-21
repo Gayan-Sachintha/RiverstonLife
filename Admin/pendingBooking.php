@@ -45,6 +45,10 @@ include('../Controllers/config.php');
         function ApproveBooking(id){
             window.location.href = '../Controllers/approveBooking.php?id=' + id;
         }
+
+        function DeleteBooking(id){
+            window.location.href = '../Controllers/deleteBooking.php?id=' + id;
+        }
     </script>
 
 </head>

@@ -35,11 +35,11 @@ if (isset ($_GET['id'])) {
                     $mail->Password = 'hhyfylwwusevfizl';
                     $mail->SMTPSecure = 'ssl';
                     $mail->Port = 465;
-                    $mail->setFrom('wpqpzp@gmail.com', 'Smartvaathi');
-                    $mail->addReplyTo('wpqpzp@gmail.com', 'Smartvaathi');
+                    $mail->setFrom('wpqpzp@gmail.com', 'NatureVilla');
+                    $mail->addReplyTo('wpqpzp@gmail.com', 'NatureVilla');
                     $mail->addAddress($email);
                     $mail->isHTML(true);
-                    $mail->Subject = 'Welcome to Smartvaathi ';
+                    $mail->Subject = 'Welcome to Nature Villa ';
                     $bodyContent = "
                     <html>
                       
@@ -47,32 +47,17 @@ if (isset ($_GET['id'])) {
                             <p>Dear $tname,</p>
                             <table>
                             <tr>
-                            <h3 style='color:red;'>Your verification Code : '  $code '</h3>
                             </tr>
                             <tr>
                                     <td>
                                     We hope this message finds you well.
-                                    Thank you for taking the time to apply for access to our Teacher Portal. 
-                                    We understand the anticipation and effort that goes into such applications and appreciate your interest in joining our educational community. 
-                                    After a careful review of your application, we regret to inform you that we are unable to approve your registration at this time.
-                                    Our decision is based on [specific reason for rejection, e.g., 'incomplete application details,' 'eligibility criteria not met,' 'verification of credentials pending,' etc.]. 
-                                    We aim to maintain a high standard of collaboration and resource sharing among educators, and as such, we adhere strictly to our registration guidelines.
+                                    Thank you for join with our adventuer site. Your booking is approved. Let's meet up as soon as posible.
                                     </td>
                                      </tr>
                 
                                 <tr>
                                     <td>
-                                    Please do not be disheartened, as this is not a reflection of your qualifications or your passion for education. We encourage you to review the following steps, 
-                                    which may improve the chances of your application being successful in the future:
-                                    <ul>
-                                    <li>1.	Review Eligibility: Ensure that you meet all the necessary eligibility criteria outlined on our registration page.</li>
-                                    <li>2.	Complete Application: Verify that all fields in the application form are filled out accurately and that no required information is missing.</li>
-                                    <li>3.	Documentation: If applicable, please provide all necessary and verifiable documentation that supports your credentials as an educator.</li>
-                                    <li>4.	Reapply: Once you have addressed the reasons for your application's rejection, we welcome you to reapply for access to the Teacher Portal.</li>
-                                    </ul>
-                                    <p>We understand that this news may be disappointing, and we are here to provide you with any assistance or clarification you may need regarding this process. 
-                                    For further inquiries or support,</p>
-                                    <p>please feel free to contact our support team at support@smartvaati.com or +94112345688.
+                                    <p>please feel free to contact our support team at support@naturevila.com or +94112345688.
                                     </p>
                                     </td>
                                 </tr>

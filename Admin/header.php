@@ -69,7 +69,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="#">View Calendar</a>
+                        <a class="collapse-item" href="viewCalender.php">View Calendar</a>
                         <a class="collapse-item" href="#">Update Calendar</a>
                         <a class="collapse-item" href="#">Cancel Event</a>
                     </div>
