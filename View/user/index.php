@@ -107,9 +107,9 @@
           <div class="col-12 mt-3">
             <div class="row">
               <!-- carusal -->
-              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
+              <div class="col-4 "><img src="../assets/images/ecvilla3.jpg" alt="" style="width: 103%;height: 100%;">
               </div>
-              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
+              <div class="col-4 "><img src="../assets/images/ecvilla2.jpg" alt="" style="width: 103%;height: 100%;">
               </div>
               <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
               </div>
