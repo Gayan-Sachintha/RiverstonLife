@@ -274,7 +274,7 @@
                     <div class="col-12 ">
                         <div class="card shadow mb-4">
                             <table class="table" style="align-items: center;">
-                                <thead class="bg-gradient-primary">
+                                <thead class="" style="background-color: #565E57;">
                                     <tr style="color: white;">
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
@@ -288,8 +288,8 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Physics</td>
-                                        <td>Mr/Mrs</td>
+                                        <td>Thushani Perera</td>
+                                        <td>thushani@gmail.com</td>
                                         <td>Alamo, California</td>
                                         <td>2</td>
                                         <td>Admin</td>
