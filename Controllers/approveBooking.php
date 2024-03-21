@@ -1,4 +1,10 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 include ('config.php');
 
 if (isset ($_GET['id'])) {
@@ -16,8 +22,8 @@ if (isset ($_GET['id'])) {
             if (mysqli_num_rows($resultemail) > 0) {
                 while ($row = mysqli_fetch_array($resultemail)) {
 
-                    $email = $row["Email"];
-                    $tname = $row["FirstName"];
+                    $email = $row["email"];
+                    $tname = $row["	first_name"];
 
 
                     $code = uniqid();
@@ -25,8 +31,7 @@ if (isset ($_GET['id'])) {
                     $mail->IsSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'dderuwan1000@gmail.com
-                    ';
+                    $mail->Username = 'dderuwan1000@gmail.com';
                     $mail->Password = 'hhyfylwwusevfizl';
                     $mail->SMTPSecure = 'ssl';
                     $mail->Port = 465;
@@ -84,7 +89,7 @@ if (isset ($_GET['id'])) {
                         echo 'Success';
 
                     }
-                    header("Location:../Admin/pendingTeacher.php");
+                    header("Location:../Admin/allBookings.php");
                 }
             }
 
