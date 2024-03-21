@@ -14,8 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $conn->real_escape_string($_POST['email']);
     $nic = $conn->real_escape_string($_POST['nic']);
     $contact_no = $conn->real_escape_string($_POST['contactno']);
+    $status = "Pending";
 
-    $sql = "INSERT INTO villareservations (no_of_rooms, check_in_date, check_out_date, adults, kids, first_name, last_name, email, nic, contact_no) VALUES ('$no_of_rooms', '$check_in_date', '$check_out_date', '$adults', '$kids', '$first_name', '$last_name', '$email', '$nic', '$contact_no')";
+    $sql = "INSERT INTO villareservations (status, no_of_rooms, check_in_date, check_out_date, adults, kids, first_name, last_name, email, nic, contact_no) VALUES ('$status', '$no_of_rooms', '$check_in_date', '$check_out_date', '$adults', '$kids', '$first_name', '$last_name', '$email', '$nic', '$contact_no')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: ../view/user/index.php");

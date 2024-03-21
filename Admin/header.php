@@ -53,7 +53,7 @@
                         <h6 class="collapse-header">Bookings Managment</h6>
                         <a class="collapse-item" href="allBookings.php">All Bookings</a>
                         <a class="collapse-item" href="addAdmin.php">Add Booking</a>
-                        <a class="collapse-item" href="allBookings.php">Pending Bookings</a>
+                        <a class="collapse-item" href="pendingBooking.php">Pending Bookings</a>
                     </div>
                 </div>
             </li>

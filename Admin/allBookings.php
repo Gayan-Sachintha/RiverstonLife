@@ -289,12 +289,12 @@ include('../Controllers/config.php');
                                 <tbody>
 
                                     <?php
-                                    $sql = "SELECT * FROM villareservations";
+                                    $sql = "SELECT * FROM villareservations WHERE status = 'Approved'";
 
                                     $result = mysqli_query($conn, $sql);
 
                                     if (mysqli_num_rows($result)) {
-                                        $row = mysqli_fetch_assoc($result);
+                                        while($row = mysqli_fetch_assoc($result)){
                                     ?>
                                         <tr>
                                             <td><?php echo $row['first_name'] ?></td>
@@ -308,6 +308,7 @@ include('../Controllers/config.php');
                                         </tr>
 
                                     <?php
+                                        }
                                     }
                                     ?>
                                 </tbody>
