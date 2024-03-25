@@ -1,5 +1,9 @@
 <?php
-    include("../Controllers/config.php");
+include("../Controllers/config.php");
+session_start();
+if (!isset($_SESSION['id'])) {
+    header("location:login.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +28,11 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        function DeletePackages(id){
+        function DeletePackages(id) {
             window.location.href = '../Controllers/deletePackages.php?id=' + id;
         }
 
-        function UpdatePackages(id){
+        function UpdatePackages(id) {
             window.location.href = 'UpdatePackages.php?id=' + id;
         }
     </script>
@@ -277,7 +281,7 @@
                 <form action="">
                     <div class="col-12 ">
                         <div class="card shadow mb-4">
-                        <table class="table" style="align-items: center;">
+                            <table class="table" style="align-items: center;">
                                 <thead class="" style="background-color: #565E57;">
                                     <tr style="color: white;">
                                         <th scope="col">Image</th>
@@ -291,22 +295,22 @@
                                 </thead>
 
                                 <?php
-                                    $sql = "SELECT * FROM packages";
-                                    $result = mysqli_query($conn,$sql);
+                                $sql = "SELECT * FROM packages";
+                                $result = mysqli_query($conn, $sql);
 
-                                    if(mysqli_num_rows($result) > 0){
-                                        while($row = mysqli_fetch_array($result)){  
+                                if (mysqli_num_rows($result) > 0) {
+                                    while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <tbody>
-                                    <tr>
-                                        <th><img src="<?php echo $row["imagePath"]?>" style="width: 50px;height: 50px;"></th>
-                                        <td><?php echo $row["id"] ?></td>
-                                        <td><?php echo $row["packageName"] ?></td>
-                                        <td><?php echo $row["description"] ?></td>
-                                        <td><?php echo "Rs ".$row["price"] ?></td>
-                                        
-                                        <td>
-                                            <!-- <div class="dropdown">
+                                        <tbody>
+                                            <tr>
+                                                <th><img src="<?php echo $row["imagePath"] ?>" style="width: 50px;height: 50px;"></th>
+                                                <td><?php echo $row["id"] ?></td>
+                                                <td><?php echo $row["packageName"] ?></td>
+                                                <td><?php echo $row["description"] ?></td>
+                                                <td><?php echo "Rs " . $row["price"] ?></td>
+
+                                                <td>
+                                                    <!-- <div class="dropdown">
                                                 <select name="status" id="status" onChange="updateStatus(this, '')">
                                                     <option value="Approved" class="text-success" >Approved</option>
                                                     <option value="Blocked" class="text-danger">Blocked</option>
@@ -314,16 +318,16 @@
                                                 </select>
                                             </div> -->
 
-                                            <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
-                                                <button type="button" class="btn btn-success" onclick="UpdatePackages(<?php echo $row['id'] ?>)">Update</button>
-                                                <button type="button" class="btn btn-danger" onclick="DeletePackages(<?php echo $row['id'] ?>)">Delete</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                                    <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px;">
+                                                        <button type="button" class="btn btn-success" onclick="UpdatePackages(<?php echo $row['id'] ?>)">Update</button>
+                                                        <button type="button" class="btn btn-danger" onclick="DeletePackages(<?php echo $row['id'] ?>)">Delete</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                 <?php
-                                        }
                                     }
+                                }
                                 ?>
                             </table>
                             <tfooter class="mb-4" style="margin-right: 2%;">

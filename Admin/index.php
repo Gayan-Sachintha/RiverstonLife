@@ -1,8 +1,8 @@
 <?php
-if (!isset($_SESSION["id"])) {
+session_start();
+if (!isset($_SESSION['id'])) {
     header("location:login.php");
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@ if (!isset($_SESSION["id"])) {
     <div id="wrapper">
 
         <?php include 'header.php'; ?>
-        <?php include 'base.php'; ?>
+        
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

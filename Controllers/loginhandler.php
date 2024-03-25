@@ -1,35 +1,34 @@
-<?php 
-    include("../Controllers/config.php");
+<?php
+session_start();
+include('./config.php');
 
-    if(isset($_POST["login"])){
-        $email = $_POST["exampleInputEmail1"];
-        $password = $_POST["exampleInputPassword11"];
+if (isset($_POST['login'])) {
+    $email = $_POST['exampleInputEmail1'];
+    $password = $_POST['exampleInputPassword11'];
+    
+    $sql = "SELECT * FROM `admin` WHERE email = ? AND password = ?";
+    $stmt = mysqli_prepare($conn, $sql);
 
-        $sql = "Select * From `admin` Where `email` = '".$email."' and `password` = '".$password."'";
+    // Bind parameters
+    mysqli_stmt_bind_param($stmt, "ss", $email, $password);
 
-        $result = mysqli_query($conn,$sql);
+    // Execute query
+    mysqli_stmt_execute($stmt);
 
-        if(mysqli_num_rows($result) > 0){
-            $query = "SELECT id, name, email FROM `admin` WHERE `email` = '$email' AND `password` = '$password'";
-            $result2 = $conn->query($query);
+    // Get result
+    $result = mysqli_stmt_get_result($stmt);
 
-            if(mysqli_num_rows($result2) > 0){
+    // Check if any rows are returned
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
 
-                $row = mysqli_fetch_assoc($result2);
-
-                $_SESSION["id"] = 1;
-
-                header("Location: ../Admin/index.php");
-                exit();
-            }
-
-            else{
-                echo "No result found";
-            }
-        }
-        else{
-            header("Location: ../View/user/index.php");
-        }
-        
+        $_SESSION['id'] = $row['id'];
+        header("location: ../Admin/index.php");
+        exit();
+    } else {
+        echo "<script>alert('Invalid Email or Password');</script>";
     }
+} else {
+    echo "Invalid Access Method";
+}
 ?>

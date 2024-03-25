@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./static/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <style>
     html,
     body {
@@ -63,23 +61,75 @@
     Your browser does not support the video tag.
   </video> -->
 
-  <div class="chatbot">
-        <h1>C</h1>
-  </div>
-
   <div class="content">
     <div class="row">
       <div class="col-12">
-        <?php
-        include "./common/nav.php";
-        ?>
+        <?php include "./common/nav.php";?>
       </div>
-      
+
+      <div class="chatbottt" style="display:flex; position:absolute;">
+        <div class="container">
+          <div class="chatbox">
+            <div class="chatbox__support">
+              <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                  <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                  <h4 class="chatbox__heading--header">NATURE LIFE</h4>
+                  <p class="chatbox__description--header">Hi.How can I help you?</p>
+                </div>
+              </div>
+              <div class="chatbox__messages">
+                <div></div>
+              </div>
+              <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">
+                  <i class="bi bi-send"></i> Send
+                </button>
+              </div>
+            </div>
+            <div class="chatbox__button">
+              <i class="bi bi-chat-fill custom-icon"></i>
+
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript" src="./static/app.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const messages = [
+              "Hello, how can we assist you today?",
+              "Are you looking for information on our Villas?",
+              "Ask Anything you want to know about our Villas."
+            ];
+
+            const chatboxMessages = document.querySelector('.chatbox__messages');
+
+            function addMessage(index) {
+              if (index < messages.length) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('messages__item', 'messages__item--visitor');
+                messageDiv.textContent = messages[index];
+                chatboxMessages.appendChild(messageDiv);
+
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+
+                setTimeout(() => addMessage(index + 1), 1000);
+              }
+            }
+
+            addMessage(0);
+          });
+        </script>
+      </div>
 
       <div class="col-12">
         <div class="row">
-          <div class="col-12 bg-danger p-5 "style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
-            
+          <div class="col-12 bg-danger p-5 " style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
+
             <div class="row">
               <div class="col-12 text-center mt-4" style="z-index: -1;">
                 <h2 class="text-white">EXPLORE RIVERSTON</h2>
@@ -263,16 +313,13 @@
               <div class="col-4">
                 <div class="row">
                   <div class="col-4">
-                    <img src="../assets/images/footer/footer1.jpg" alt=""
-                      style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
+                    <img src="../assets/images/footer/footer1.jpg" alt="" style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
                   </div>
                   <div class="col-4">
-                    <img src="../assets/images/footer/footer2.jpg" alt=""
-                      style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
+                    <img src="../assets/images/footer/footer2.jpg" alt="" style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
                   </div>
                   <div class="col-4">
-                    <img src="../assets/images/footer/footer3.jpg" alt=""
-                      style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
+                    <img src="../assets/images/footer/footer3.jpg" alt="" style="width: 100%;height: 90%;margin-top: 5%;margin-bottom: 5%;">
                   </div>
                 </div>
               </div>
