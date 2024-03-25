@@ -6,6 +6,7 @@ if (isset($_POST["regNext"])) {
     $description = mysqli_real_escape_string($conn, $_POST["description"]);
     $price = mysqli_real_escape_string($conn, $_POST["price"]);
     $status = "Active";
+    $adminID = $_SESSION['id'];
 
     $target_dir = "../View/assets/uploads/";
     $target_file = $target_dir.basename($_FILES['imageFile']["name"]);
@@ -18,11 +19,11 @@ if (isset($_POST["regNext"])) {
         die("Sorry, there was an error uploading your file.");
     }
 
-    $sql = "INSERT INTO packages (id, status, packageName, description, price, imagePath) VALUES (null, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO packages (id, adminID, status, packageName, description, price, imagePath) VALUES (null, ?, ?, ?, ?, ?, ?)";
     $status = "Approved";
     
     if ($stmt = mysqli_prepare($conn, $sql)) {
-        mysqli_stmt_bind_param($stmt, "sssss" , $status, $packageName, $description, $price, $image);
+        mysqli_stmt_bind_param($stmt, "isssss" , $adminID, $status, $packageName, $description, $price, $image);
 
         if (mysqli_stmt_execute($stmt)) {
             echo "New record created successfully";

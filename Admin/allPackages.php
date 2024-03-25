@@ -1,6 +1,5 @@
 <?php
 include("../Controllers/config.php");
-session_start();
 if (!isset($_SESSION['id'])) {
     header("location:login.php");
 }
@@ -186,7 +185,7 @@ if (!isset($_SESSION['id'])) {
                                 </thead>
 
                                 <?php
-                                $sql = "SELECT * FROM packages";
+                                $sql = "SELECT * FROM packages WHERE adminID = ".$_SESSION['id']."";
                                 $result = mysqli_query($conn, $sql);
 
                                 if (mysqli_num_rows($result) > 0) {
