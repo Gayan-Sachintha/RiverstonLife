@@ -1,26 +1,35 @@
-<?php
-    include("../Model/database.php");
+<?php 
+    include("../Controllers/config.php");
 
-    session_start();
-    if(isset($_POST["btnsubmit"])){
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+    if(isset($_POST["login"])){
+        $email = $_POST["exampleInputEmail1"];
+        $password = $_POST["exampleInputPassword11"];
 
-        $sql = "SELECT * FROM customers WHERE email = `".$email."` AND password = `".$password."`";
+        $sql = "Select * From `admin` Where `email` = '".$email."' and `password` = '".$password."'";
 
-        $result = mysqli_query($connect, $sql);
+        $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) > 0){
-            $row = mysqli_fetch_assoc($result);
+            $query = "SELECT id, name, email FROM `admin` WHERE `email` = '$email' AND `password` = '$password'";
+            $result2 = $conn->query($query);
 
-            $_SESSION["name"] = $row["name"];
-            $_SESSION["email"] = $row["email"];
+            if(mysqli_num_rows($result2) > 0){
 
-            header("location: home.html");
+                $row = mysqli_fetch_assoc($result2);
+
+                $_SESSION["id"] = 1;
+
+                header("Location: ../Admin/index.php");
+                exit();
+            }
+
+            else{
+                echo "No result found";
+            }
         }
-
         else{
-            header("location: register.php");
+            header("Location: ../View/user/index.php");
         }
+        
     }
 ?>
