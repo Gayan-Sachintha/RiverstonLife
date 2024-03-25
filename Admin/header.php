@@ -69,7 +69,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="viewCalender.php">View Calendar</a>
+                        <a class="collapse-item" href="calendar.php">View Calendar</a>
                     </div>
                 </div>
             </li>
@@ -109,7 +109,7 @@
             </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRevenue"
                     aria-expanded="true" aria-controls="collapseRevenue">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -123,7 +123,7 @@
                         <a class="collapse-item" href="#">View Payments</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider">
