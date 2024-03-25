@@ -9,7 +9,7 @@ body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-image: url("../images/jungle.jpg");
+    background-image: url("../images/hiking-fzzdv4zw5o3x2d88.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -22,7 +22,7 @@ body{
 }
 
 .topic h1{
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 68px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
