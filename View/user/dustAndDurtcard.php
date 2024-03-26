@@ -54,8 +54,8 @@
                 <h2 class="montserrat-price" style="color: #222823;">LKR 2000.00</h2>
             </div>
             <div class="p-2 text-center">
-                <button class="btn mb-3 mt-2 btnreserve" href="villa.php"><b>Reserve
-                        Now</b></button>
+               <button class="btn mb-3 mt-2 btnreserve" href="villa.php"><a style = "text-decoration:none; color:black; font-weight:650;"  href = "./bookingFormPackage.php">Reserve
+                        Now</a></button>
             </div>
         </div>
     </div>
