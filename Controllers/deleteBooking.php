@@ -4,7 +4,7 @@ include('config.php');
 if (isset($_GET['id'])) {
     $BookingId = $_GET['id'];
 
-    $sql = "DELETE FROM villareservations WHERE id = ?";
+    $sql = "UPDATE villareservations SET status = 'Cancelled' WHERE id = ?";
 
     if ($stmt = mysqli_prepare($conn, $sql)) {
         mysqli_stmt_bind_param($stmt, "i", $BookingId);

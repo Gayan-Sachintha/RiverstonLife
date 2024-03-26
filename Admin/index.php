@@ -136,6 +136,9 @@ if (!isset($_SESSION['id'])) {
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
+                                            <?php 
+                                                $sql = "SELECT SUM()"
+                                            ?>
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Total Income</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">Rs 250,000</div>
@@ -214,9 +217,8 @@ if (!isset($_SESSION['id'])) {
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
+                        <!-- <div class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-truncate">Total Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
@@ -232,7 +234,6 @@ if (!isset($_SESSION['id'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
@@ -240,13 +241,13 @@ if (!isset($_SESSION['id'])) {
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <!-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-truncate">Revenue Contribution</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -277,7 +278,7 @@ if (!isset($_SESSION['id'])) {
                                             <i class="fas fa-circle text-info"></i> Referral
                                         </span>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
