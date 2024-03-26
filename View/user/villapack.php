@@ -50,8 +50,8 @@
                 <h2 class="montserrat-price" style="color: #222823;">LKR 5500.00</h2>
             </div>
             <div class="p-2 text-center">
-                <button class="btn mb-3 mt-2 btnreserve"><b>Reserve
-                        Now</b></button>
+                <button class="btn mb-3 mt-2 btnreserve"><a style = "text-decoration:none; color:black; font-weight:650;"  href = "./bookingFormVilla.php">Reserve
+                        Now</a></button>
             </div>
         </div>
     </div>
@@ -70,8 +70,8 @@
                 <h2 class="montserrat-price" style="color: #222823;">LKR 3800.00</h2>
             </div>
             <div class="p-2 text-center">
-                <button class="btn mb-3 mt-2 btnreserve"><b>Reserve
-                        Now</b></button>
+                <button class="btn mb-3 mt-2 btnreserve"><a style = "text-decoration:none; color:black; font-weight:650;"  href = "./bookingFormVilla.php">Reserve
+                        Now</a></button>
             </div>
         </div>
     </div>
@@ -90,8 +90,8 @@
                 <h2 class="montserrat-price" style="color: #222823;">LKR 1500.00</h2>
             </div>
             <div class="p-2 text-center">
-                <button class="btn mb-3 mt-2 btnreserve"><b>Reserve
-                        Now</b></button>
+                <button class="btn mb-3 mt-2 btnreserve"><a style = "text-decoration:none; color:black; font-weight:650;"  href = "./bookingFormVilla.php">Reserve
+                        Now</a></button>
             </div>
         </div>
     </div>
