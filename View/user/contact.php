@@ -103,11 +103,11 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-6">
                         <!-- Contact form -->
-                        <form action="#" method="post">
+                        <form action="../../Controllers/contact.php" method="post">
                             <p class="form-label text-white" style="text-align: center;">For reservations and inquiries reach out to one of our customer representatives via email, direct phone line, WhatsApp, or via submitting the contact form below.</p>
                             <div class="mb-3">
                                 <label for="name" class="form-label text-white">Your Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text"  class="form-control" id="name" name="name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label text-white">Your Email</label>
@@ -117,7 +117,7 @@
                                 <label for="message" class="form-label text-white">Message</label>
                                 <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" name="contact" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>

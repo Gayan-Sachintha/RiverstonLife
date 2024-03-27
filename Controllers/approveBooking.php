@@ -31,8 +31,8 @@ if (isset ($_GET['id'])) {
                     $mail->IsSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'dderuwan1000@gmail.com';
-                    $mail->Password = 'hhyfylwwusevfizl';
+                    $mail->Username = 'walallawitad@gmail.com';
+                    $mail->Password = 'jbmpnprdokcwuudp';
                     $mail->SMTPSecure = 'ssl';
                     $mail->Port = 465;
                     $mail->setFrom('wpqpzp@gmail.com', 'NatureVilla');

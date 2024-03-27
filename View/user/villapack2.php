@@ -84,7 +84,7 @@
             <img class="card-img-top mx-3" src="../assets/images/ecvilla5.jpg" alt="Card image cap" style="width: 90%;border-radius: 10%;">
             <div class="card-body mb-2">
                 <p class="card-text text-center text-white">
-                A simple, intimate cabana experience, perfect for unwinding and enjoying the natural ambiance. </p>
+                    A simple, intimate cabana experience, perfect for unwinding and enjoying the natural ambiance. </p>
             </div>
             <div class="p-2 text-center mb-2" style="background-color: #F3C13E;margin-top: -10px;">
                 <h2 class="montserrat-price" style="color: #222823;">LKR 2500.00</h2>
@@ -92,6 +92,19 @@
             <div class="p-2 text-center">
                 <button class="btn mb-3 mt-2 btnreserve"><b>Reserve
                         Now</b></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row  d-flex ">
+        <div class="container col-12 p-5" style="background-color: #222823; border-radius: 50px;">
+            <div class="row justify-content-center">
+                <form action="../../Controllers/feedback2.php" method="post">
+                    <h4 class="text-center mb-5" style="color: white;">Add Your Comment</h4>
+                    <input class="mb-4" type="text" name="name" id="" placeholder="Enter Your Name" style="background-color: #ffffff;border-radius: 15px; width: 90%; height: 40px;">
+                    <input type="mb-4 text-area" name="feedback" id="" placeholder="Comment Here" style="background-color: #ffffff;border-radius: 15px; width: 90%; height: 70px;">
+                    <button class="mt-4 btn btnreserve" name="feedbackBTN" type="submit" style=" width: 150px; font-weight: bold; ">SUBMIT</button>
+                </form>
             </div>
         </div>
     </div>

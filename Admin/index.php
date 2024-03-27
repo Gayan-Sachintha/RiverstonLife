@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('../Controllers/config.php');
 if (!isset($_SESSION['id'])) {
     header("location:login.php");
 }
@@ -32,7 +32,7 @@ if (!isset($_SESSION['id'])) {
     <div id="wrapper">
 
         <?php include 'header.php'; ?>
-        
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -136,12 +136,20 @@ if (!isset($_SESSION['id'])) {
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <?php 
-                                                $sql = "SELECT SUM()"
+                                            <?php
+                                            $sql = "SELECT SUM(price) AS total from packages WHERE adminID = ".$_SESSION['id']."";
+
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                                $row = mysqli_fetch_assoc($result);
                                             ?>
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Income</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Rs 250,000</div>
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Total Income</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">Rs <?php echo $row['total'] ?></div>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -158,9 +166,20 @@ if (!isset($_SESSION['id'])) {
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Total Packages</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                            <?php
+                                            $sql = "SELECT COUNT(*) AS packagesnum from packages WHERE adminID = ".$_SESSION['id']."";
+
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                                $row = mysqli_fetch_assoc($result);
+                                            ?>
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    Total Packages</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $row['packagesnum'] ?></div>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -176,13 +195,20 @@ if (!isset($_SESSION['id'])) {
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Bookings
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">24</div>
-                                                </div>
-                                            </div>
+                                            <?php
+                                            $sql = "SELECT COUNT(*) AS booking from villareservations WHERE status = 'Approved'";
+
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                                $row = mysqli_fetch_assoc($result);
+                                            ?>
+                                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                    Total Bookings</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $row['booking'] ?></div>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -198,9 +224,20 @@ if (!isset($_SESSION['id'])) {
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Canceled Bookings</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                                        <?php
+                                            $sql = "SELECT COUNT(*) AS booking from villareservations WHERE status = 'Cancelled'";
+
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                                $row = mysqli_fetch_assoc($result);
+                                            ?>
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Cancel Bookings</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $row['booking'] ?></div>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>

@@ -85,8 +85,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Customer Notification</h6>
-                        <a class="collapse-item" href="allCourses.php">All Notification</a>
-                        <a class="collapse-item" href="pendingCourses.php">Customer Feedbacks</a>
+                        <a class="collapse-item" href="message.php">All Messages</a>
+                        <a class="collapse-item" href="feedback.php">Customer Feedbacks</a>
                     </div>
                 </div>
             </li>
