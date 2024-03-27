@@ -204,7 +204,7 @@ if (!isset($_SESSION['id'])) {
                                                 $row = mysqli_fetch_assoc($result);
                                             ?>
                                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                    Total Bookings</div>
+                                                    Total Approved Bookings</div>
                                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $row['booking'] ?></div>
                                             <?php
                                             }
