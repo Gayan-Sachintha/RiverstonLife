@@ -55,12 +55,11 @@
 </head>
 
 <body>
-  <!-- <video playsinline autoplay muted loop id="bgVideo"
-    style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -3;">
+  <video playsinline autoplay muted loop id="bgVideo" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -3;">
     <source src="../assets/videos/backgroundVideo1.mp4" type="video/mp4">
     Your browser does not support the video tag.
-  </video> -->
-
+  </video> 
+ 
   <div class="content">
     <div class="row">
       <div class="col-12">
@@ -128,6 +127,7 @@
 
       <div class="col-12">
         <div class="row">
+          
           <div class="col-12 bg-danger p-5 " style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
 
             <div class="row">
@@ -154,17 +154,19 @@
               </div>
             </div>
           </div>
-          <div class="col-12 mt-3">
+          <div class="col-12 mt-3" style="height: 500px;">
             <div class="row">
               <!-- carusal -->
-              <div class="col-4 "><img src="../assets/images/ecvilla3.jpg" alt="" style="width: 103%;height: 100%;">
+              <div class="col-4 "><img src="../assets/images/ecvilla3.jpg" alt="" style="width: 100%;height: 70%;">
               </div>
-              <div class="col-4 "><img src="../assets/images/ecvilla2.jpg" alt="" style="width: 103%;height: 100%;">
+              <div class="col-4 "><img src="../assets/images/ecvilla2.jpg" alt="" style="width: 100%;height: 70%;">
               </div>
-              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 103%;height: 100%;">
+              <div class="col-4 "><img src="../assets/images/homebg.jpg" alt="" style="width: 100%;height: 70%;">
               </div>
+              
             </div>
           </div>
+          
           <div class="col-12 mt-5 text-white mt-4">
             <div class="row">
               <div class="col-12 col-md-5">
@@ -175,7 +177,7 @@
                         <span>THE CAPPA LUXURY HOTEL</span>
                         <H3>Enjoy a Luxury Experience</H3>
                       </div>
-                      <div class="col-12 text-center">
+                      <div class="col-12 ">
                         <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the
                           aucan vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the
                           pellentesque velit. Donec id velit ac arcu posuere blane.</p>
@@ -195,10 +197,10 @@
               <div class="col-12 col-md-7">
                 <div class="row">
                   <div class="col-6 " style="margin-top: 10%;height: 300px;">
-                    <img src="../assets/images/indeximg/indeximg (4).jpg" alt="" style="width: 100%;height: 100%;">
+                    <img src="../assets/images/indeximg/indeximg (4).jpg" alt="" style="width: 90%;height: 95%;">
                   </div>
                   <div class="col-6" style="height: 400px;">
-                    <img src="../assets/images/indeximg/indeximg (1).jpg" alt="" style="width: 100%;height: 100%;">
+                    <img src="../assets/images/indeximg/indeximg (1).jpg" alt="" style="width: 90%;height: 100%;">
                   </div>
                 </div>
               </div>
@@ -259,7 +261,7 @@
               </div>
               <div class="col-12 col-md-7">
                 <div class="row">
-                  <img src="../assets/images/indeximg/indeximg (5).jpg" alt="" style="width: 100%;height: 100%;">
+                  <img src="../assets/images/indeximg/indeximg (5).jpg" alt="" style="width: 90%;height: 80%;">
                 </div>
               </div>
             </div>
