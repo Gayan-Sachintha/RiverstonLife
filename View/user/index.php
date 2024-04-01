@@ -129,6 +129,12 @@
         <div class="row">
           
           <div class="col-12 bg-danger p-5 " style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
+            <div class="col-12 text-center mt-4" style="z-index: -1;">
+            <h2 class="text-white" style="font-family: 'Rubik Scribble', Rubik Scribble; font-size: 50px; text-shadow: 0 0 5px rgba(255,255,255,0.5); background-image: linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 100%); -webkit-background-clip: text;  ">
+              Embark on an Unforgettable Journey of Luxury and Serenity with Riverston Life!
+              </h2>
+            </div>
+
 
             <div class="row">
               <div class="col-12 text-center mt-4" style="z-index: -1;">
