@@ -118,7 +118,7 @@
                                                 </p>
                                                 <div class="p-2 text-center">
                                                     <hr>
-                                                   <a href="./natureLifeVillaView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
+                                                   <a href="./natureLifeEcoResortView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,7 +133,7 @@
                                                 <p class="card-text text-center">Immerse yourself in luxury amidst nature at Riverston Nature Villa. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.</p>
                                                 <div class="p-2 text-center">
                                                     <hr>
-                                                   <a href="./natureKabana.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
+                                                   <a href="./natureVillaView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
                                                 </div>
                                             </div>
                                         </div>
