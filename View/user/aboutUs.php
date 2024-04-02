@@ -32,6 +32,7 @@
             z-index: 1;
             position: relative;
             background: rgba(30, 40, 31, 0.75);
+            padding-bottom: 10px; /* Adjusted padding to make the page shorter */
         }
 
         .nav-style {
@@ -63,7 +64,7 @@
         .value-heading {
             font-size: 2rem;
             text-transform: uppercase;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         .value-subheading {
@@ -75,6 +76,12 @@
         .value-text {
             color: white;
             margin-bottom: 2rem;
+        }
+        .transparent-box {
+            background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency and color here */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
     </style>
     <title>About Us - RIVERSTON LIFE</title>
@@ -99,32 +106,47 @@
                     <div class="col-12 col-md-8">
                         <div class="row">
                             <div class="col-12 text-white text-center mt-5 mb-3">
-                                <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><i>ABOUT US</i></h1>
+                                <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">ABOUT US</h1>
+                                <div class="value-text ">WELCOME TO OUR UNIFIED PLATFORM, WHERE THREE DISTINCT DESTINATIONS COME TOGETHER TO OFFER YOU AN EXTRAORDINARY EXPERIENCE AMIDST NATURE'S WONDERS.
+                                KNOWING OUR VILLAS BETTER THAN ANYONE ENABLES US TO GUARANTEE OUR GUESTS MAKE INFORMED DECISIONS ABOUT WHICH VILLA TO CHOOSE. </div>
                             </div>
 
-                            <div class="container">
+                            <div class="container my-3"> <!-- Adjusted margin -->
                                 <div class="row">
-
-
-                                    <div class="col-md-6">
-                                        <div class="value-subheading">KNOWING OUR VILLAS BETTER THAN ANYONE ENABLES US TO GUARANTEE OUR GUESTS MAKE INFORMED DECISIONS ABOUT WHICH VILLA TO CHOOSE.</div>
-                                        <p>
+                                    <div class="col-md-6 text-white">
+                                        <div class="value-subheading"></div>
+                                        <p>  
 
                                         </p>
-
-                                        <p class="value-text">Since 1999 we have been managing villas & this remains a huge part of what we do which explains why we know our villas so well. From our head office near Galle on Sri Lanka’s palm-fringed southern coastline Sri Lanka is our sole focus. Recognition came in 2021 when the readers of Condé Nast Traveller voted Eden Villas one of the best villa companies in the world.</p>
+                                        <p class="value-text">Welcome to Nature Life Eco Resort, a serene cabana retreat nestled in the picturesque Knuckles mountain range. With lush greenery and a tranquil atmosphere, our resort offers the perfect escape for relaxation and adventure. Your ultimate destination for nature's embrace awaits!</p>
+                                        <p class = "value-text">Experience adventure at Dust and Dirt Quad Bike Adventure Park near Babarakiri Ella in Matale. For thrill-seekers, our park offers exciting sports and entertainment activities. Combine this with the tranquil beauty of Nature Life Eco Resort and the majestic Riverston Nature Villa for an unforgettable getaway in the heart of nature. Your unforgettable adventure awaits!</p>
+                                        <p class = "value-text">At Riverston Nature Villa, you'll discover a haven of natural splendor tucked away in the majestic Knuckles massif. Surrounded by the stunning beauty of Bambarakiriella, our villa offers a perfect blend of adventure and relaxation. Whether you're craving a thrilling outdoor excursion or a peaceful retreat, Riverston Nature Villa promise. </p>
                                     </div>
                                     <div class="col-md-6">
-                                        <img src="../assets/images/villa/villa1.jpg" alt="" class="img-fluid" style="width: 90%; height: 60%; border-radius: 40px;">
-                                    </div>
+                                        <img src="../assets/images/villa/villa1.jpg" alt="" class="img-fluid" style="width: 90%; height: 80%; border-radius: 30px;">
+                                    </div> 
                                 </div>
                             </div>
-                            <div class="col-12 col-md-2"></div>
-                            <div class="col-12">
-                                <p class="text-white text-center">Welcome to Riverston Life, where we blend luxury with nature to provide you with an unforgettable experience. Our mission is to offer unique, eco-friendly accommodations that allow our guests to relax, unwind, and reconnect with nature.</p>
-                                <p class="text-white text-center">Founded in [Year], Riverston Life has become a sanctuary for those seeking peace and adventure in the serene Riverston area. Our resort features beautifully designed villas, each offering its unique charm and connection to the natural surroundings.</p>
-                                <p class="text-white text-center">We are committed to sustainability and preserving the beauty of our environment. Join us at Riverston Life for a journey of relaxation, adventure, and connection to the natural world.</p>
-                                <!-- Add more content about your team, history, values, etc. -->
+
+                            <div class="col-md-6 text-white">
+                                <div class="transparent-box">
+                                    <div class="value-subheading">OUR VISION</div>
+                                    <p class="text-left">At our unified platform, we strive to provide a seamless and unforgettable experience that celebrates the beauty and diversity of Sri Lanka's natural landscapes.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 text-white">
+                                <div class="transparent-box">
+                                    <div class="value-subheading">OUR MISSION</div>
+                                    <p class="text-left">Our mission is to offer unparalleled hospitality, eco-friendly accommodations, and thrilling adventures, while promoting environmental sustainability and responsible tourism practices.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-white mb-5"> <!-- Added margin-bottom -->
+                                
+                                    <div class="value-subheading">JOIN US</div>
+                                    <p class="text-left">Embark on a journey of discovery and adventure with us as we invite you to explore the wonders of Nature Life Eco Resort, Riverston Nature Villa, and Dust and Dirt Quad Bike Adventure Park. Whether you seek relaxation, adventure, or a bit of both, our unified platform promises an unforgettable experience amidst the splendor of nature. Welcome to our unified platform, where three distinct destinations come together to offer you an extraordinary experience amidst nature's wonders. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +154,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 mt-2">
+        <div class="row">
             <!-- Footer -->
             <?php include "./common/footer.php"; ?>
         </div>
