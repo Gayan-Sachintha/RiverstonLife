@@ -118,7 +118,7 @@
                                                 </p>
                                                 <div class="p-2 text-center">
                                                     <hr>
-                                                   <a href="./natureLifeVillaView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
+                                                   <a href="./natureLifeEcoResortView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,12 +128,12 @@
 
                                             <img src="../assets/images/villa/villa3.jpg" alt="" style="border-radius: 50px;">
                                             <div class="card-img-overlay">
-                                                <h4 class="card-title text-center">Nature Kabana</h4>
+                                                <h4 class="card-title text-center">Riverston Nature Villa</h4>
                                                 <hr>
-                                                <p class="card-text text-center">Immerse yourself in luxury amidst nature at Nature Life Eco Resort. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.</p>
+                                                <p class="card-text text-center">Immerse yourself in luxury amidst nature at Riverston Nature Villa. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.</p>
                                                 <div class="p-2 text-center">
                                                     <hr>
-                                                   <a href="./natureKabana.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
+                                                   <a href="./natureVillaView.php" class="btn mb-3 mt-2 btnreserve"><b>View More</b></a>
                                                 </div>
                                             </div>
                                         </div>
