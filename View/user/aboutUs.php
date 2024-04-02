@@ -33,7 +33,7 @@
             position: relative;
             background: rgba(30, 40, 31, 0.75);
         }
-        
+
         .nav-style {
             color: white;
             transition: color 0.5s ease-in-out;
@@ -59,17 +59,19 @@
             border: none
         }
 
-       
+
         .value-heading {
-            font-size: 2rem; 
+            font-size: 2rem;
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
+
         .value-subheading {
-            font-size: 1.5rem; 
+            font-size: 1.5rem;
             font-weight: bold;
             color: white;
         }
+
         .value-text {
             color: white;
             margin-bottom: 2rem;
@@ -100,27 +102,25 @@
                                 <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><i>ABOUT US</i></h1>
                             </div>
 
-                        <div class="container my-5">
-        <div class="row">
-        
-       
-        <div class="col-md-6">
-            <div class="value-subheading">KNOWING OUR VILLAS BETTER THAN ANYONE ENABLES US TO GUARANTEE OUR GUESTS MAKE INFORMED DECISIONS ABOUT WHICH VILLA TO CHOOSE.</div>
-            <p>  
-
-            </p>
-            
-            <p class="value-text">Since 1999 we have been managing villas & this remains a huge part of what we do which explains why we know our villas so well. From our head office near Galle on Sri Lanka’s palm-fringed southern coastline Sri Lanka is our sole focus. Recognition came in 2021 when the readers of Condé Nast Traveller voted Eden Villas one of the best villa companies in the world.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="../assets/images/villa/villa1.jpg" alt="" class="img-fluid" style="width: 90%; height: 60%; border-radius: 40px;">
-        </div> 
-    </div>
-</div>
-    <div class="col-12 col-md-2"></div>
+                            <div class="container">
+                                <div class="row">
 
 
-                <div class="col-12">
+                                    <div class="col-md-6">
+                                        <div class="value-subheading">KNOWING OUR VILLAS BETTER THAN ANYONE ENABLES US TO GUARANTEE OUR GUESTS MAKE INFORMED DECISIONS ABOUT WHICH VILLA TO CHOOSE.</div>
+                                        <p>
+
+                                        </p>
+
+                                        <p class="value-text">Since 1999 we have been managing villas & this remains a huge part of what we do which explains why we know our villas so well. From our head office near Galle on Sri Lanka’s palm-fringed southern coastline Sri Lanka is our sole focus. Recognition came in 2021 when the readers of Condé Nast Traveller voted Eden Villas one of the best villa companies in the world.</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="../assets/images/villa/villa1.jpg" alt="" class="img-fluid" style="width: 90%; height: 60%; border-radius: 40px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-2"></div>
+                            <div class="col-12">
                                 <p class="text-white text-center">Welcome to Riverston Life, where we blend luxury with nature to provide you with an unforgettable experience. Our mission is to offer unique, eco-friendly accommodations that allow our guests to relax, unwind, and reconnect with nature.</p>
                                 <p class="text-white text-center">Founded in [Year], Riverston Life has become a sanctuary for those seeking peace and adventure in the serene Riverston area. Our resort features beautifully designed villas, each offering its unique charm and connection to the natural surroundings.</p>
                                 <p class="text-white text-center">We are committed to sustainability and preserving the beauty of our environment. Join us at Riverston Life for a journey of relaxation, adventure, and connection to the natural world.</p>

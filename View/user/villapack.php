@@ -1,3 +1,7 @@
+<?php
+include('../../Controllers/config.php');
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +39,41 @@
 
 <body>
 
-    <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
+    <?php
+
+    $sql = "SELECT * FROM packages WHERE adminID = 1";
+
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+    ?>
+            <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
+                <div class="card" style="width: 18rem;border-radius: 50px;background-color: #222823;border: none;">
+                    <div class="text-white text-center mb-2 mt-3">
+                        <h5><?php echo $row['packageName'] ?></h5>
+                    </div>
+                    <img class="card-img-top mx-3" src="<?php echo $row['imagePath'] ?>" alt="Card image cap" style="width: 90%;height: 20%; border-radius: 10%;">
+                    <div class="card-body mb-2">
+                        <p class="card-text text-center text-white">
+                            <?php echo $row['description'] ?>
+                        </p>
+                    </div>
+                    <div class="p-2 text-center mb-2" style="background-color: #F3C13E;margin-top: -10px;">
+                        <h2 class="montserrat-price" style="color: #222823;">LKR <?php echo $row['price'] ?></h2>
+                    </div>
+                    <div class="p-2 text-center">
+                        <button class="btn mb-3 mt-2 btnreserve"><a style="text-decoration:none; color:black; font-weight:650;" href="./bookingFormVilla.php">Reserve
+                                Now</a></button>
+                    </div>
+                </div>
+            </div>
+    <?php
+        }
+    }
+    ?>
+
+    <!-- <div class="col-12 col-md-4 mt-2 mb-4 mx-4 mx-md-0">
         <div class="card" style="width: 18rem;border-radius: 50px;background-color: #222823;border: none;">
             <div class="text-white text-center mb-2 mt-3">
                 <h5>The Explorer's Retreat</h5>
@@ -94,7 +132,7 @@
                         Now</a></button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="row  d-flex ">
         <div class="container col-12 p-5" style="background-color: #222823; border-radius: 50px;">

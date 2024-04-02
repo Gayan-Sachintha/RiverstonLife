@@ -139,7 +139,7 @@ if (!isset($_SESSION['id'])) {
                         <h1 class="h3 mb-0 text-gray-800">Add Packages</h1>
                     </div>
 
-                    <form action="../Controllers/submitpackages.php" method="post" enctype="multipart/form-data">
+                    <form action="../View/user/submitpackages.php" method="post" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Package Name</label>

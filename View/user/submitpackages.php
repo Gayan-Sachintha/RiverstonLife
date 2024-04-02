@@ -1,5 +1,6 @@
 <?php
-include("config.php");
+session_start();
+include("../../Controllers/config.php");
 
 if (isset($_POST["regNext"])) {
     $packageName = mysqli_real_escape_string($conn, $_POST["packageName"]);
@@ -8,7 +9,7 @@ if (isset($_POST["regNext"])) {
     $status = "Active";
     $adminID = $_SESSION['id'];
 
-    $target_dir = "../View/assets/uploads/";
+    $target_dir = "../assets/uploads/";
     $target_file = $target_dir.basename($_FILES['imageFile']["name"]);
 
     if (move_uploaded_file($_FILES['imageFile']["tmp_name"], $target_file)) {
@@ -27,7 +28,7 @@ if (isset($_POST["regNext"])) {
 
         if (mysqli_stmt_execute($stmt)) {
             echo "New record created successfully";
-            header("Location: ../Admin/index.php"); 
+            header("Location: ../../Admin/index.php"); 
         } else {
             echo "Error: " . mysqli_error($conn);
         }
