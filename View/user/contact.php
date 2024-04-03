@@ -127,6 +127,15 @@
         .collapsing .collapse-icon {
             transform: rotate(0deg);
         }
+      .btn.btn-primary {
+        background-color: #F3C13E; /* Yellow color */
+        border-color: #F3C13E; /* Border color */
+        }
+
+        .btn.btn-primary:hover {
+        background-color: #ffbf00; /* Darker yellow color on hover */
+        border-color: #ffbf00; /* Darker border color on hover */
+        }
     </style>
     <title>RIVERSTON LIFE - Contact Us</title>
 </head>
