@@ -57,6 +57,12 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
+.btn.btn-danger,
+    .btn.btn-success,
+    .btn.btn-primary {
+      background-color: #ffbf00 !important; /* Adjust button color here */
+      border-color: #ffbf00 !important; /* Adjust button border color here */
+    }
 
   </style>
   <title>RIVERSTON LIFE</title>
