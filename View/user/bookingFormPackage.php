@@ -127,6 +127,7 @@
                           <input type="text" class="form-control" id="contactNo" name="contactNo" required>
                         </div>
                         <div class="col-12 text-center mb-3">
+                          <button type="button" class="btn btn-success"><a href="calendar.php" style="text-decoration: none; color: white;">CHECK AVAILABILITY</a></button>
                           <button type="submit" class="btn btn-success">BOOK PACKAGE</button>
                         </div>
                       </div>
