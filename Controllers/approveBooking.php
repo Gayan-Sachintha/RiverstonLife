@@ -5,6 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
+session_start();
 include ('config.php');
 
 if (isset ($_GET['id'])) {
