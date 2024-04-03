@@ -18,13 +18,13 @@
           Immerse yourself in luxury amidst nature at Nature Life Eco Resort. Offering breathtaking views, a private pool, and exquisite interiors, this villa is a sanctuary of peace and elegance. Perfect for serene family holidays or intimate escapes.
 
           <div>
-            <a href="" class="me-4 text-reset">
+            <a href="https://www.facebook.com/RiverstonNatureLifeEcoResort/" class="me-4 text-reset">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="" class="me-4 text-reset">
+            <a href="https://www.instagram.com/dust_anddirt_slatv?igsh=MWxhOTBuMm81bG5oNQ==" class="me-4 text-reset">
               <i class="bi bi-instagram"></i>
             </a>
-            <a href="" class="me-4 text-reset">
+            <a href=" https://wa.me/0719143846" class="me-4 text-reset">
               <i class="bi bi-whatsapp"></i>
             </a>
           </div>
