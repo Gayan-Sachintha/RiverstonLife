@@ -50,13 +50,21 @@
       background-position: center;
       z-index: -1;
     }
+
+    .transparent-box {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency and color here */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
   </style>
   <title>RIVERSTON LIFE</title>
 </head>
 
 <body>
   <video playsinline autoplay muted loop id="bgVideo" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -3;">
-    <source src="../assets/videos/backgroundVideo1.mp4" type="video/mp4">
+    <source src="../assets/videos/backgroundVideoindex.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video> 
  
@@ -128,7 +136,7 @@
       <div class="col-12">
         <div class="row">
           
-          <div class="col-12 bg-danger p-5 " style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
+          <div class="col-12 bg-danger p-8 " style="background-image: url('../assets/images/g.jpg'); background-size: cover; background-position: center;">
             <div class="col-12 text-center mt-4" style="z-index: -1;">
             <h2 class="text-white" style="font-family: 'Rubik Scribble', Rubik Scribble; font-size: 50px; text-shadow: 0 0 5px rgba(255,255,255,0.5); background-image: linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 100%); -webkit-background-clip: text;  ">
               Embark on an Unforgettable Journey of Luxury and Serenity with Riverston Life!
@@ -172,147 +180,105 @@
               
             </div>
           </div>
-          
-          <div class="col-12 mt-5 text-white mt-4">
-            <div class="row">
-              <div class="col-12 col-md-5">
+
+      <!--Set01-->
+      <div class="row container-fluid d-flex mt-5 mb-5">
+      <div class="col-12 col-md-8 mx-auto"> 
+        <div class="transparent-box">
+            <div class="col-12 text-center text-black">
+                <h3>EXPLORE NATURE'S BEAUTY WITH RIVERSTON LIFE - WHERE TRANQUILITY MEETS ADVENTURE</h3>
+            </div>
+            <div class="col-12">
+                <p>Discover the essence of luxury living amidst nature's embrace at Riverston Life. 
+                    Our unified platform brings together three distinct destinations - Nature Life Eco Resort, Dust and Dirt Quad Bike Adventure Park, and Riverston Nature Villa - to offer an unparalleled experience in the heart of Sri Lanka's natural landscapes. 
+                    Whether you're seeking relaxation, adventure, or a blend of both, Riverston Life invites you to embark on a journey of discovery and indulgence. 
+                    From tranquil cabana retreats to thrilling outdoor excursions, each aspect of Riverston Life is meticulously crafted to ensure an unforgettable escape into the beauty and diversity of nature. 
+                    Join us and immerse yourself in a world where luxury meets wilderness, and every moment is a celebration of life's wonders.</p>   
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Set02-->
+      <div class="row container-fluid d-flex mt-5 mb-5">
+    <div class="col-12 col-md-7" style="padding-left:15rem">
+        <div class="col-12">
+            <img src="../assets/images/indeximg/indeximg (2).jpg" alt="" style="width: 80%;height: 80%;">
+        </div>
+    </div>
+
+    <div class="col-12 col-md-5 text-center text-white" style="padding-right:8rem">
+        <div class="col-12">
+            <h3>NATURE LIFE ECO RESORT</h3>
+        </div>
+        <div class="col-12 mt-2 text-justify"> 
+            Discover Nature Life Eco Resort, a hidden gem nestled amidst the lush landscapes of the Knuckles mountain range. 
+            Our serene cabana retreat offers a tranquil escape from the hustle and bustle of city life, inviting guests to immerse themselves in the beauty of nature.
+             With eco-friendly accommodations harmoniously integrated into the surrounding environment, each stay promises not only relaxation but also a deeper connection to the natural world. 
+             Whether you seek peaceful moments surrounded by verdant greenery or thrilling adventures in the great outdoors, Nature Life Eco Resort caters to every traveler's desire, ensuring an unforgettable experience in the heart of Sri Lanka's breathtaking wilderness.
+        </div>
+
+        <div class="col-12 mt-4"></div>
+        <div class="col-12 mt-4">
+            <button class="btn btn-danger">Learn More</button>
+        </div>
+    </div>
+</div>
+
+             <!--Set03-->
+      <div class="row  container-fluid d-flex mt-5 mb-5">
+            <div class="col-12 col-md-6 text-center text-white " style="padding-left:15rem">
+                  <div class="col-12">
+                        <h3>DUST AND DIRT QUAD BIKE ADVENTURE PARK</h3>
+                  </div>
+                  <div class="col-12 mt-2">Embark on an adrenaline-fueled journey at Dust and Dirt Quad Bike Adventure Park, situated near Babarakiri Ella in Matale. 
+                    Our park offers exhilarating sports and entertainment activities for thrill-seekers of all ages. 
+                    Whether you're navigating rugged terrain on a quad bike or ziplining through the forest canopy, every moment promises an unforgettable adventure. 
+                    With a range of outdoor experiences and breathtaking scenery, Dust and Dirt Quad Bike Adventure Park invites you to unleash your inner explorer and create lasting memories in the heart of nature.</div>
+                  <div class="col-12 mt-4">
+                        <button class="btn btn-danger">Learn More</button>
+                  </div>
+            </div>
+            <div class="col-12 col-md-6" style="padding-left:6rem">
                 <div class="row">
-                  <div class="col-7 mx-3">
                     <div class="row">
-                      <div class="col-12">
-                        <span>THE CAPPA LUXURY HOTEL</span>
-                        <H3>Enjoy a Luxury Experience</H3>
-                      </div>
-                      <div class="col-12 ">
-                        <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the
-                          aucan vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the
-                          pellentesque velit. Donec id velit ac arcu posuere blane.</p>
-                        <p>Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula.
-                          Orci varius natoque penatibus et magnis dis parturient monte nascete ridiculus mus
-                          nellentesque habitant morbine.</p>
-                      </div>
-                      <div class="col-12">
-                        <p>Reservation</p>
-                        <p>778125454</p>
-                      </div>
+                        <img src="../assets/images/indeximg/indeximg5.jpg" alt="" style="width: 80%;height: 90%;">
                     </div>
-                  </div>
-
                 </div>
-              </div>
-              <div class="col-12 col-md-7">
-                <div class="row">
-                  <div class="col-6 " style="margin-top: 10%;height: 300px;">
-                    <img src="../assets/images/indeximg/indeximg (4).jpg" alt="" style="width: 90%;height: 95%;">
-                  </div>
-                  <div class="col-6" style="height: 400px;">
-                    <img src="../assets/images/indeximg/indeximg (1).jpg" alt="" style="width: 90%;height: 100%;">
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="col-12 mt-4">
-            <div class="row">
-              <div class="col-12 col-md-5 mx-3">
-                <img src="../assets/images/indeximg/indeximg (2).jpg" alt="" style="width: 100%;height: 100%;">
+       </div>
+      
+
+             <!--Set04-->
+             <div class="row  container-fluid d-flex  mb-5">
+            <div class="col-12 col-md-7" style="padding-left:15rem">
+
+              <div class="col-12 col-md-12 ">
+                <img src="../assets/images/indeximg/indeximg3.jpg" alt="" style="width: 80%;height: 90%;">
               </div>
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="row text-white">
-                      <div class="col-12">
-                        <h3>NATURE LIFE ECO RESORT</h3>
+
+            </div>
+
+          <div class="col-12 col-md-5 text-center text-white" style="padding-right:10rem">
+          <div class="col-12">
+                        <h3>RIVERSTON NATURE VILLA</h3>
                       </div>
-                      <div class="col-12 mt-2">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
-                        nesudea
-                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
-                        onen nivami acsestion augue artine.</div>
-                      <div class="col-12 mt-4">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
-                        nesudea
-                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
-                        onen nivami acsestion augue artine.</div>
+                      <div class="col-12 mt-2">Experience the epitome of natural splendor at Riverston Nature Villa, nestled within the majestic Knuckles massif. 
+                        Surrounded by the breathtaking beauty of Bambarakiriella, our villa offers a serene sanctuary for those seeking both adventure and relaxation. 
+                        Immerse yourself in the tranquil ambiance of the mountains, where each day begins with panoramic views of lush greenery and ends with the soothing melody of nature. 
+                        Whether you're embarking on outdoor excursions or simply unwinding amidst the serene surroundings, Riverston Nature Villa promises a rejuvenating retreat amidst Sri Lanka's captivating wilderness.</div>
                       <div class="col-12 mt-4">
                         <button class="btn btn-danger">Learn More</button>
                       </div>
                     </div>
-                  </div>
+                    
                 </div>
-              </div>
-            </div>
           </div>
-          <div class="col-12 mt-4">
-            <div class="row">
-              <div class="col-12 col-md-5 ">
-                <div class="row">
-                  <div class="col-8 mx-4">
-                    <div class="row text-white">
-                      <div class="col-12">
-                        <h3>Quad Bike Ride</h3>
-                      </div>
-                      <div class="col-12 mt-2">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
-                        nesudea
-                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
-                        onen nivami acsestion augue artine.</div>
-                      <div class="col-12 mt-4">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
-                        nesudea
-                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
-                        onen nivami acsestion augue artine.</div>
-                      <div class="col-12 mt-4">
-                        <button class="btn btn-danger">Learn More</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-7">
-                <div class="row">
-                  <img src="../assets/images/indeximg/indeximg (5).jpg" alt="" style="width: 90%;height: 80%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mt-4">
-            <div class="row">
-              <div class="col-12 col-md-5 mx-3">
+       </div>
 
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="row">
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mt-4">
-            <div class="row">
-              <div class="col-12 col-md-5 mx-3">
-                <img src="../assets/images/indeximg/indeximg (3).jpg" alt="" style="width: 100%;height: 100%;">
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="row text-white">
-                      <div class="col-12">
-                        <h3>Quad Bike Ride</h3>
-                      </div>
-                      <div class="col-12 mt-2">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
-                        nesudea
-                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
-                        onen nivami acsestion augue artine.</div>
-                      <div class="col-12 mt-4">Spa center inilla duiman at elit finibus viverra nec a lacus themo the
-                        nesudea
-                        seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne
-                        onen nivami acsestion augue artine.</div>
-                      <div class="col-12 mt-4">
-                        <button class="btn btn-danger">Learn More</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div class="col-12 mt-3 bg-success">
             <div class="row">
               <div class="col-4">
