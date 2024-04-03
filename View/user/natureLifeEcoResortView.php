@@ -112,7 +112,7 @@
                                         <div class="row bg-white p-5">
                                             <div class="col-6">
                                                 <div class="row">
-                                                    <!-- <img src="../assets/images/villa/villa1.jpg" alt="" style="transform: 0.5;"> -->
+                                                    <img src="../assets/images/girl-looks-waterfall.jpg" alt="" style="transform: 0.5; border-radius: 25px;">
                                                 </div>
                                             </div>
                                             <div class="col-6">

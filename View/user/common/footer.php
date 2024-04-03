@@ -37,13 +37,13 @@
             Products
           </h6>
           <p>
-            <a href="../user/villa.php" style="color: inherit; ">VILLA</a>
+            <a href="../user/villa.php" style="color: inherit; text-decoration: none;">VILLA</a>
           </p>
           <p>
-            <a href="../user/packages.php" style="color: inherit; ">PACKAGES</a>
+            <a href="../user/packages.php" style="color: inherit; text-decoration: none;">PACKAGES</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <a href="#!" class="text-reset" style="color: inherit; text-decoration: none;">Vue</a>
           </p>
         </div>
 
@@ -54,13 +54,13 @@
             NAVIGATION LINKS
           </h6>
           <p>
-            <a href="../user/index.php" style="color: inherit; ">HOME</a>
+            <a href="../user/index.php" style="color: inherit; text-decoration: none;"">HOME</a>
           </p>
           <p>
-            <a href="../user/aboutUs.php" style="color: inherit; ">ABOUT US</a>
+            <a href="../user/aboutUs.php" style="color: inherit; text-decoration: none;"">ABOUT US</a>
           </p>
           <p>
-            <a href="../user/contact.php" style="color: inherit; ">CONTACT</a>
+            <a href="../user/contact.php" style="color: inherit; text-decoration: none;"">CONTACT</a>
           </p>
         </div>
 

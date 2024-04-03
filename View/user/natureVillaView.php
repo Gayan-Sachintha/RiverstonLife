@@ -112,7 +112,7 @@
                                         <div class="row bg-white p-5">
                                             <div class="col-6">
                                                 <div class="row">
-                                                     <img src="../assets/images/ecvilla2.jpg" alt="" style="transform: 0.5; height:100%">
+                                                     <img src="../assets/images/ecvilla2.jpg" alt="" style="transform: 0.5; height:100%; border-radius:25px;">
                                                 </div>
                                             </div>
                                             <div class="col-6">
