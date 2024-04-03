@@ -1,6 +1,7 @@
 <?php
-include('../Controllers/config.php');
 session_start();
+include('../Controllers/config.php');
+
 if (!isset($_SESSION['id'])) {
     header("location:login.php");
 }
