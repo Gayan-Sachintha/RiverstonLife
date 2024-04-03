@@ -119,7 +119,7 @@
                           <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="form-group mb-2">
-                          <label for="nic" class="text-white text-bold">NIC Number</label>
+                          <label for="nic" class="text-white text-bold">NIC  Number</label>
                           <input type="text" class="form-control" id="nic" name="nic">
                         </div>
                         <div class="form-group mb-2">
