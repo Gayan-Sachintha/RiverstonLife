@@ -21,6 +21,10 @@ body {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+.myimage:hover{
+    transform: scale(1.9);
+}
  
 .chatbox {
     position: fixed;
@@ -163,3 +167,4 @@ body {
     font-size: 40px; 
     color: #F3C13E; 
 }
+
