@@ -25,7 +25,7 @@
             <a href="https://www.instagram.com/dust_anddirt_slatv?igsh=MWxhOTBuMm81bG5oNQ==" class="me-4 text-reset">
               <i class="bi bi-instagram"></i>
             </a>
-            <a href=" https://wa.me/0719143846" class="me-4 text-reset">
+            <a href=" https://wa.me/+94701492017" class="me-4 text-reset">
               <i class="bi bi-whatsapp"></i>
             </a>
           </div>
