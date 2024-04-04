@@ -189,22 +189,22 @@
                 <div class="carousel-item active">
                   <img src="../assets/images/morskie-oko-tatry.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5 style="font-size: 62px;">First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5 style="font-size: 62px;">WELCOME TO RIVERSTON LIFE!</h5>
+                    <p>Escape to Nature's Embrace: Discover Riverston Life</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/closeup-exotic-forest-animal.jpg" style="height: 80vh;" class="d-block w-100" alt="...">
+                  <img src="../assets/images/img1.jpg" style="height: 80vh;" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5 style="font-size: 62px;">Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5 style="font-size: 62px;">EXPLORE RIVERSTON VILLAS!</h5>
+                    <p>Unveiling the Beauty of Riverston: Your Gateway to Serenity</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/girl-looks-waterfall.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
+                  <img src="../assets/images/img3.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5 style="font-size: 62px;">Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5 style="font-size: 62px;">ADVENTURE AWAITS!</h5>
+                    <p>Nature's Playground Awaits: Experience Riverston Life</p>
                   </div>
                 </div>
               </div>
