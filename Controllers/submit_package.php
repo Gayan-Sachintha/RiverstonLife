@@ -1,6 +1,6 @@
 <?php
- 
- include 'config.php'; 
+
+include 'config.php';
 
 $stmt = $conn->prepare("INSERT INTO package_bookings (package, time, adults, kids, otherMessage, firstName, lastName, email, nic, contactNo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssiiisssss", $package, $time, $adults, $kids, $otherMessage, $firstName, $lastName, $email, $nic, $contactNo);
@@ -18,12 +18,11 @@ $nic = $_POST['nic'];
 $contactNo = $_POST['contactNo'];
 
 if ($stmt->execute()) {
-    echo '<script>alert(New Record Added Successfully)</script>';
-    echo '<script>window.history.back()</script>';
+    echo "<script>alert('Booking Added Successfully');</script>";
+    echo "<script>window.history.back()</script>";
 } else {
     echo "Error: " . $stmt->error;
 }
 
 $stmt->close();
 $conn->close();
-?>
