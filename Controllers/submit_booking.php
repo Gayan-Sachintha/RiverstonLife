@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php'; 
+include 'config.php';
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO villareservations (status, no_of_rooms, check_in_date, check_out_date, adults, kids, first_name, last_name, email, nic, contact_no) VALUES ('$status', '$no_of_rooms', '$check_in_date', '$check_out_date', '$adults', '$kids', '$first_name', '$last_name', '$email', '$nic', '$contact_no')";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: ../view/user/index.php");
+        echo '<script>alert(New Record Added Successfully)</script>';
+        echo '<script>window.history.back()</script>';
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -29,4 +30,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Invalid Request";
 }
-?>
