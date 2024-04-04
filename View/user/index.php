@@ -187,7 +187,7 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../assets/images/morskie-oko-tatry.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
+                  <img src="../assets/images/img6.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
                   <div class="carousel-caption d-none d-md-block">
                     <h5 style="font-size: 62px;">WELCOME TO RIVERSTON LIFE!</h5>
                     <p>Escape to Nature's Embrace: Discover Riverston Life</p>
