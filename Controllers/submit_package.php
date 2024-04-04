@@ -18,7 +18,8 @@ $nic = $_POST['nic'];
 $contactNo = $_POST['contactNo'];
 
 if ($stmt->execute()) {
-    echo "New record created successfully";
+    echo '<script>alert(New Record Added Successfully)</script>';
+    echo '<script>window.history.back()</script>';
 } else {
     echo "Error: " . $stmt->error;
 }
