@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO villareservations (status, no_of_rooms, check_in_date, check_out_date, adults, kids, first_name, last_name, email, nic, contact_no) VALUES ('$status', '$no_of_rooms', '$check_in_date', '$check_out_date', '$adults', '$kids', '$first_name', '$last_name', '$email', '$nic', '$contact_no')";
 
     if ($conn->query($sql) === TRUE) {
-        echo '<script>alert(New Record Added Successfully)</script>';
-        echo '<script>window.history.back()</script>';
+        echo "<script>alert('Booking Added Successfully');</script>";
+        echo "<script>window.history.back()</script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
