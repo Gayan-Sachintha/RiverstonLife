@@ -85,3 +85,15 @@ Contributions to this project are welcome. Please fork the repository and submit
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+
+
+![Packages](https://github.com/user-attachments/assets/16b2f76d-9813-448c-a9e9-7e9f73b29f75)
+
+![Booking form for pacakges](https://github.com/user-attachments/assets/a57c7da7-87d6-4f76-acff-9ce9a9d5089d)
+
+![View Product](https://github.com/user-attachments/assets/1c7382bd-bd47-489f-a29e-d535e8ab3752)
+
+![Update profile](https://github.com/user-attachments/assets/0a6762cc-e29d-4074-bba3-ffcf1c1aa4e8)
+
+![your bookings](https://github.com/user-attachments/assets/baa22e13-f5f7-4561-92af-e531bbe8d342)
+
